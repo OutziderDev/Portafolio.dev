@@ -1,12 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Header from "../components/Header.astro"
-import Main from "../components/Main.astro"
-import Jumbo from "../components/Jumbo.astro"
-import Experiencia from "../components/Experiencia.astro"
+import background from "../assets/background.svg"
 ---
 <Layout title="Home">
-  <Header/>
-  <Jumbo/>
-  <Experiencia/>
+  
+
+<!--   <div class="relative bg-[url('/backgroundInit.svg')] bg-scroll h-72 bg-no-repeat"></div>
+ -->
+
+ <div class="relative bg-[url('/backgroundInit.svg')] bg-cover h-[400px] bg-no-repeat bg-center w-full">
+  <h1 class="text-center text-white text-7xl my-10">Luis Barrios De León</h1>
+  <h1 class="text-center text-white font-mono text-7xl my-10">Luis Barrios De León</h1>
+  <h1 class="text-center text-white font-serif text-7xl my-10">Luis Barrios De León</h1>
+  <h1 class="text-center text-white font-sans text-7xl my-10">Luis Barrios De León</h1>
+</div>
+  <div class="bg-secundary h-screen  text-white">
+    <h2>CARDS</h2>
+  </div>
 </Layout>

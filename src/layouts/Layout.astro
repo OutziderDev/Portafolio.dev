@@ -11,15 +11,17 @@ const pageTitle = 'Mi Portafolio Dev'
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
-<!--     <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#0044cc_0%,#000_100%)]"></div>-->    
-    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#00ff_100%)]"></div>
-    <slot/>
+  <body class="bg-primary">
+<!--     <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#00ff_100%)]"></div>
+ -->    <slot/>
   </body>
 </html>
 
 <style>
   body {
     margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
   }
+
 </style>
