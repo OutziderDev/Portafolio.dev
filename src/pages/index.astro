@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro"
 import '@fontsource/luckiest-guy';
 import background from "../assets/background.svg"
-import { ShinyText } from "../components/ShiniText.astro"
+import ShiniText from "../components/ShiniText.astro"
 ---
 <Layout title="Home">
   
@@ -19,6 +19,7 @@ import { ShinyText } from "../components/ShiniText.astro"
 </div>
   <div class="bg-secundary h-screen  text-white">
     <h2>CARDS</h2>
+    <ShiniText text="Just some shiny text!" disabled={false} speed={10} />
   </div>
   <div class="bg-primary h-screen relative text-white">
     separate

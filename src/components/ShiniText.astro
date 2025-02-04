@@ -1,23 +1,22 @@
 ---
-let { text, disabled, speed, classN} = Astro.props
+let { text, disabled, speed, className} = Astro.props
+import '@fontsource/luckiest-guy';
 ---
-const ShinyText = ({ text, disabled = false, speed = 5, classN = '' }) => {
-  const animationDuration = `${speed}s`
-
-  return (
-    <div
-      class={`shiny-text ${disabled ? 'disabled' : ''} ${classN}`}
-      style={{ animationDuration }}
-    >
+ 
+  <div
+    class={`shiny-text ${disabled ? 'disabled' : ''} ${className}`}
+    style={{ speed }}
+  >
       {text}
-    </div>
-  )
-}
+  </div>
+
 
 
 <style>
   .shiny-text {
   color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  font-size: 128px;
+  font-family: 'Luckiest Guy', system-ui;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
