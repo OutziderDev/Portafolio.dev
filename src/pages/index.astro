@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import '@fontsource/luckiest-guy';
 import background from "../assets/background.svg"
 ---
 <Layout title="Home">
@@ -9,10 +10,11 @@ import background from "../assets/background.svg"
  -->
 
  <div class="relative bg-[url('/backgroundInit.svg')] bg-cover h-[400px] bg-no-repeat bg-center w-full">
-  <h1 class="text-center text-white text-7xl my-10">Luis Barrios De León</h1>
-  <h1 class="text-center text-white font-mono text-7xl my-10">Luis Barrios De León</h1>
-  <h1 class="text-center text-white font-serif text-7xl my-10">Luis Barrios De León</h1>
-  <h1 class="text-center text-white font-sans text-7xl my-10">Luis Barrios De León</h1>
+  <h1 class="text-center text-white text-9xl mt-44">Luis Barrios</h1>
+  <h2 class="text-center text-white text-4xl my-1">Desarrollador de Software</h2>
+  <p class=" text-center text-green-500 text-xl  border border-green-500 rounded-full px-4 py-1">
+    Disponible
+  </p>
 </div>
   <div class="bg-secundary h-screen  text-white">
     <h2>CARDS</h2>
@@ -37,6 +39,9 @@ import background from "../assets/background.svg"
 </Layout>
 
 <style>
+  h1 {
+    font-family: 'Luckiest Guy', system-ui;
+  }
   .custom-shapes-divider-top-1738471140 {
     position: absolute;
     top: 0;
