@@ -1,16 +1,15 @@
 ---
 import '@fontsource/luckiest-guy';
-const { text, disabled, className} = Astro.props
+const {text} = Astro.props
 ---
-  <div class={`shiny-text ${disabled ? 'disabled' : ''} ${className}`}  >
+  <div class="shiny"  >
     {text}
   </div>
 
 <style>
-  .shiny-text {
+  .shiny {
   color: #ffffff91; /* Adjust this color to change intensity/style */
   font-family: 'Luckiest Guy', system-ui;
-  text-wrap: balance;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
@@ -31,9 +30,5 @@ const { text, disabled, className} = Astro.props
   100% {
     background-position: -100%;
   }
-}
-
-.shiny-text.disabled {
-  animation: none;
 }
 </style>
