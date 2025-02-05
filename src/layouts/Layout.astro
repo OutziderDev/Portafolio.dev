@@ -11,16 +11,18 @@ const pageTitle = 'Mi Portafolio Dev'
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="bg-primary scroll-smooth font-serif">
+  <body class="bg-primary scroll-smooth font-serif scrollbar-custom">
     <Header/>
     <slot/>
-  </body>
+  </body> 
 </html>
 
 <style>
+  html{
+    scroll-behavior: smooth;
+  }
   body {
     margin: 0;
     padding: 0;
   }
-
 </style>

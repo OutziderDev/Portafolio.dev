@@ -31,5 +31,27 @@ export default {
       }
     },
 	},
-	plugins: [],
+	plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-custom': {
+          'scrollbar-width': 'auto', // Para navegadores Firefox
+          '&::-webkit-scrollbar': {
+            width: '10px',  // Ancho 
+          },
+          '&::-webkit-scrollbar-track': {
+            background: 'transparent', // dondo de la barra
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: "#660000", // Color del pulgar (parte que se arrastra)
+            borderRadius: '10px',  // Forma redondeada del pulgar
+          },
+          '&::-webkit-scrollbar-thumb:hover': {
+            background: 'red', // Color al pasar el mouse
+          },
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
+  ],
 }
