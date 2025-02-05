@@ -1,8 +1,8 @@
 ---
 import '@fontsource/luckiest-guy';
-const {text} = Astro.props
+const { text } = Astro.props
 ---
-  <div class="shiny text-9xl bg-clip-text text-center"  >
+  <div class="shiny text-6xl md:text-[9rem] bg-clip-text text-center text-wrap">
     {text}
   </div>
 
@@ -11,14 +11,15 @@ const {text} = Astro.props
   color: #ffffffb1;
   font-family: 'Luckiest Guy', system-ui;
   background: linear-gradient(
-    120deg,
+    160deg,
     rgba(255, 255, 255, 0) 40%,
     rgba(255, 255, 255, 0.921) 50%,
     rgba(255, 255, 255, 0) 60%
   );
-  background-size: 200% 100%;
+/*   font-size: clamp(8rem, 2.5vw, 8rem);
+ */  background-size: 200% 100%;
   -webkit-background-clip: text;
-  animation: shine 2s linear infinite;
+  animation: shine 1.6s linear infinite;
 }
 
 @keyframes shine {
