@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
       colors:{
+        primary: "#111111",
         secundary: "#A00",
-        primary: "#111111"
       },
       keyframes:{
         fadeIn:{

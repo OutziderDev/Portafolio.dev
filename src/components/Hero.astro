@@ -1,9 +1,11 @@
 ---
+import SocialPills from './SocialPills.astro'
 import ShiniText from "./ShiniText.astro"
 ---
-<div class="animate-fadeIn mt-28 mb-24 md:my-36 flex flex-col">
+<div class="animate-fadeIn mt-28 mb-24 md:my-24 flex flex-col">
 
-  <ShiniText text="Luis Barrios" disabled={false}  />
+  <ShiniText text="Luis Barrios" />
+
   <h2 class="text-center text-white text-xl md:text-4xl font-bold opacity-90">Desarrollador de Software</h2>
 
   <div class="m-3 px-3 py-2 gap-2 border rounded-full border-gray-400/30 inline-flex items-center justify-center self-center">
@@ -14,14 +16,18 @@ import ShiniText from "./ShiniText.astro"
     Disponible para colaborar
   </div>
 
-  <p class=" opacity-70">
-    Graduado en Licenciatura de Desarrollo de Software con sólidos conocimientos en la creación de páginas    web y aplicaciones web en el área de proyectos de comercio electrónico. Gracias a mi formación
-    universitaria, participé en diversos proyectos y adquirí conocimientos en una variedad de lenguajes de
-    programación, Frameworks para el Front-end y el Back-end y bases de datos. Además, he desarrollado
-    habilidades en el uso de diversas tecnologías y herramientas de diseño.
-    He aplicado mis habilidades de manera cooperativa como independiente en proyectos personales y
-    académicos, lo que me ha permitido desarrollar un enfoque proactivo y autodirigido hacia el aprendizaje y la
-    resolución de problemas.
+  <p class="text-white/80 tracking-wide">
+    Entusiasta por las nuevas tecnologías, tanto de software como de hardware, el aprendizaje continuo y la enseñanza. 
+    <b class="text-rose-500">Más de 1 año de experiencia en el desarrollo de sistemas y páginas web.</b>  
+    Gracias a mi formación académica, he participado en diversos proyectos donde adquirí conocimientos básicos en una variedad de lenguajes de programación, 
+    <b class="text-rose-500">frameworks para el Front-end y el Back-end, así como bases de datos.</b> 
+    Además, he utilizado diversas tecnologías y herramientas de diseño y edición.
   </p>
+  <p class="text-white/80 mt-2 tracking-wide">
+    Aplico mis habilidades y conocimientos tanto en proyectos colaborativos como independientes, 
+    con el objetivo de ofrecer soluciones personalizadas, innovadoras, escalables y alineadas con las mejores prácticas de programación.
+  </p>
+
+  <SocialPills/>
 
 </div>
