@@ -1,5 +1,7 @@
 ---
 import '@fontsource/luckiest-guy';
+import Github from '../assets/icons/Github.astro';
+import ShiniText from './ShiniText.astro';
 
 ---
 
@@ -14,7 +16,7 @@ import '@fontsource/luckiest-guy';
   <div class="grid lg:grid-cols-2 lg:gap-16">
     <div class="pb-4">
       <div
-        class="inline-flex gap-2 bg-gradient-to-r from-rose-500 via-rose-400 to-rose-600 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm"
+        class="inline-flex font-serif gap-2 bg-gradient-to-r from-rose-600  to-rose-400 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm"
       >
         <span>SPA</span>
         <span>-</span>
@@ -22,41 +24,51 @@ import '@fontsource/luckiest-guy';
       </div>
 
       <h3 class="text-3xl  mt-2 md:text-4xl md:mt-4">
-        FSO - Blog System
+        FSO - Blog App
       </h3>
 
       <a href="" 
          target="_blank" 
          rel="noopener noreferrer"
-         class="bg-white text-gray-950 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"
+         class="bg-white text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"
         >
-          <span>Demo!</span>
+          <span class="flex items-center gap-2 group"> 
+            Demo
+            <div class="group-hover:-rotate-45 transition ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </span>
       </a>
       <a href="" 
          target="_blank" 
          rel="noopener noreferrer"
-         class="bg-white text-gray-950 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"
+         class="bg-white text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"
         >
-          <span>Demo!</span>
+          <span class=" flex items-center gap-2">
+            Github
+            <Github class="size-4"/>
+          </span>
       </a>
 
-
-      <hr class="border-t-2 border-white/15 my-6" />
-
-      <p class="text-background-foreground/50">
+      <p class="text-background-foreground/50 border-t border-gray-500 mt-3 py-2">
         Es una web de recomendación de viajes, donde puedes encontrar destinos y
         actividades para tus próximas vacaciones. Esta potenciada por IA,
         optimizando la experiencia del usuario, utilizando SSR para mejorar la
         velocidad de la carga.
       </p>
 
-      
+      <div>
+        Stack
+      </div>
+
     </div>
+
     <div class="relative">
       <img
-        class="mt-8 -mb-4 md:mb-0 lg:mt-0 rounded-t-[48px] border-8 border-b-0 lg:rounded-tr-0 lg:border-r-0 border-neutral-800 bg-neutral-950 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-        src="/src/assets/sys.png"
-        alt="Easy Travel Dreams"
+        class="mt-8 -mb-4 rounded-t-3xl border-8 border-b-0  lg:border-r-0 object-cover border-zinc-500 lg:w-auto lg:absolute  lg:h-full lg:max-w-none lg:hover:scale-105 delay-200 transition"
+        src="/src/assets/waterApp.png"
       />
     </div>
   </div>
