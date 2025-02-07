@@ -1,8 +1,9 @@
 ---
 
 ---
-<div class="rotate-180 fill-secundary bottom-14">
-  <svg data-name="Layer 1"
+<div class="rotate-180 fill-secundary bottom-14 wave">
+  <svg data-name="wave"
+    class="wave-svg"
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 1200 120" 
     preserveAspectRatio="none">
@@ -10,3 +11,15 @@
       </path>
   </svg>
 </div>
+
+<style>
+  @keyframes waveMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); scale: 115%;} 
+  100% { transform: translateX(0); }
+}
+
+.wave path {
+  animation: waveMove 5s ease-in-out infinite;
+}
+</style>
