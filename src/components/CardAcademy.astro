@@ -1,8 +1,8 @@
 ---
-const { clases = "", spotlightColor = "rgba(255, 0, 0, 0.25)" } = Astro.props;
+const { clases} = Astro.props;
 ---
 
-<div class={`card-spotlight ${clases}`} data-spotlight>
+<div class={`p-6 overflow-hidden bg-black border border-gray-400/30 max-w-xs relative rounded-3xl card-spotlight ${clases}`} data-spotlight>
   <slot />
 </div>
 
@@ -19,24 +19,12 @@ const { clases = "", spotlightColor = "rgba(255, 0, 0, 0.25)" } = Astro.props;
 
       card.style.setProperty("--mouse-x", `${x}px`);
       card.style.setProperty("--mouse-y", `${y}px`);
-      card.style.setProperty("--spotlight-color", spotlightColor );
+      card.style.setProperty("--spotlight-color", "rgba(255,0,0,0.5)");
     });
   });
 </script>
 
 <style>
-  .card-spotlight {
-    position: relative;
-    border-radius: 1.5rem;
-    border: 1px solid #222;
-    background-color: #111;
-    padding: 2rem;
-    overflow: hidden;
-    --mouse-x: 50%;
-    --mouse-y: 50%;
-    --spotlight-color: rgba(255, 255, 255, 0.05);
-  }
-
   .card-spotlight::before {
     content: "";
     position: absolute;
