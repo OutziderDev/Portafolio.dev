@@ -1,0 +1,59 @@
+---
+const { clases} = Astro.props;
+---
+<div class="w-full flex justify-end md:justify-start  items-center ">
+  <div class={`p-6 overflow-hidden bg-black border w-4/5 md:w-2/5 border-gray-400/30 relative rounded-2xl card-spotlight ${clases}`} data-spotlight>
+    <h3 class="text-lg font-bold font-serif text-white">Bootcamp - Helsinki</h3>
+    <p class="text-sm text-gray-300">2024 - 2025</p>
+    <p class="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum cupiditate a mollitia delectus. Officiis quibusdam, ullam pariatur fuga deserunt obcaecati? Consectetur nesciunt quae illum incidunt neque? Praesentium repellendus mollitia deleniti.</p>
+  </div>
+  <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-6 bg-red-500 rounded-full border-4 border-primary"></div>
+</div>
+
+<!-- <div class="w-full flex justify-end md:justify-start  items-center ">
+  <CardTimeline clases="">
+    <h3 class="text-lg font-bold font-serif text-white">Bootcamp - Helsinki</h3>
+    <p class="text-sm text-gray-300">2024 - 2025</p>
+    <p class="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum cupiditate a mollitia delectus. Officiis quibusdam, ullam pariatur fuga deserunt obcaecati? Consectetur nesciunt quae illum incidunt neque? Praesentium repellendus mollitia deleniti.</p>
+  </CardTimeline>
+  <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-6 bg-red-500 rounded-full border-4 border-primary"></div>
+</div> -->
+
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const card = document.querySelector("[data-spotlight]");
+
+    if (!card) return;
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+      card.style.setProperty("--spotlight-color", "rgba(255,0,0,0.4)");
+    });
+  });
+</script>
+
+<style>
+  .card-spotlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  .card-spotlight:hover::before,
+  .card-spotlight:focus-within::before {
+    opacity: 0.6;
+  }
+</style>

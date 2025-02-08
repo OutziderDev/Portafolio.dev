@@ -1,69 +1,49 @@
 ---
-  import CardAcademy from "./CardAcademy.astro"
+  import CardTimeline from './CardTimeline.astro';
   import '@fontsource/luckiest-guy';
 ---
 <div class="mb-0">
-  <h2 class="text-white text-4xl my-12 text-right">&lt; Experiencia /&gt;</h2>
+  <h2 class="text-white text-4xl my-12 text-center">&lt; Formación Academica /&gt;</h2>
 
-  <div class="flex justify-center">
-    <div class="relative timeline w-full" id="timeline">
+    <div class="relative" id="timeline">
 
-      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 timeline-line"></div>
-      <div class="flex flex-col items-center relative">
-        <div class="w-full flex justify-star relative">
-          <CardAcademy clases="">
+      <div class="absolute top-0 md:left-1/2 transform-cpu md:-translate-x-1/2 w-3 rounded-md timeline-line"></div>
+
+      <div class="flex flex-col items-center relative gap-y-2">
+
+        <!-- <div class="w-full flex justify-end md:justify-start  items-center ">
+          <CardTimeline clases="">
             <h3 class="text-lg font-bold font-serif text-white">Bootcamp - Helsinki</h3>
             <p class="text-sm text-gray-300">2024 - 2025</p>
-            <p class="mt-2 text-gray-400">Descripción breve del estudio realizado.</p>
+            <p class="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum cupiditate a mollitia delectus. Officiis quibusdam, ullam pariatur fuga deserunt obcaecati? Consectetur nesciunt quae illum incidunt neque? Praesentium repellendus mollitia deleniti.</p>
+          </CardTimeline>
+          <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-6 bg-red-500 rounded-full border-4 border-primary"></div>
+        </div> -->
+        <CardTimeline/>
+        <CardTimeline/>
+
+        <!-- <div class="w-full flex justify-end  items-center ">
+          <CardTimeline clases="">
+            <h3 class="text-lg font-bold font-serif text-white">Bootcamp - Helsinki</h3>
+            <p class="text-sm text-gray-300">2024 - 2025</p>
+            <p class="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum cupiditate a mollitia delectus. Officiis quibusdam, ullam pariatur fuga deserunt obcaecati? Consectetur nesciunt quae illum incidunt neque? Praesentium repellendus mollitia deleniti.</p>
           </CardAcademy>
-          <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-red-500 rounded-full border-4 border-black"></div>
-        </div>
+          <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-6 bg-red-500 rounded-full border-4 border-primary"></div>
+        </div> -->
+
       </div>
     </div>
-  </div>
   
-
-  <!-- <div class="relative timeline w-full max-w-3xl" id="timeline">
-    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 timeline-line"></div>
-    <div class="flex flex-col items-center relative">
-      
-      <div class="w-full flex justify-start items-center relative">
-          <div class="bg-gray-900 p-5 rounded-lg max-w-md shadow-lg">
-              <h3 class="text-lg font-bold text-cyan-400">Título del Estudio</h3>
-              <p class="text-sm text-gray-300">2022 - 2023</p>
-              <p class="mt-2 text-gray-400">Descripción breve del estudio realizado.</p>
-          </div>
-          <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-black"></div>
-      </div>
-          
-        
-      <div class="w-full flex justify-end items-center relative mt-10">
-        <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-black"></div>
-        <div class="bg-gray-900 p-5 rounded-lg max-w-md shadow-lg">
-            <h3 class="text-lg font-bold text-cyan-400">Otro Estudio</h3>
-            <p class="text-sm text-gray-300">2023 - 2024</p>
-            <p class="mt-2 text-gray-400">Otra descripción breve del estudio realizado.</p>
-        </div>
-      </div>
-
-    </div>
-  </div> -->
 </div>
 
 <style>
   h2{
     font-family: 'Luckiest Guy', system-ui;
   }
-  /* Estilo base para la línea central */
+
   .timeline-line {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 6px;
-      height: 0;
-      border-radius: 5px;
       background: linear-gradient(to bottom, rgb(133, 0, 0), #ff0000);
-      transition: height 0.3s ease-in-out;
+      transition: height 0.5s ease-in-out;
   }
 </style>
 
