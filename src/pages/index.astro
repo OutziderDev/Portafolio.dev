@@ -5,6 +5,7 @@ import Hero from "../components/Hero.astro"
 import Layout from "../layouts/Layout.astro"
 import ItemSeparated from '../assets/ItemSeparated.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Experiencia from '../components/Experiencia.astro';
 ---
 <Layout >
   
@@ -12,20 +13,23 @@ import SectionContainer from '../components/SectionContainer.astro';
       <Hero/>
     </SectionContainer>
 
-    <ItemSeparated/>
+    <ItemSeparated color="fill-secundary/85" type="wave"/>
 
-    <div id="proyectos" class=" bg-secundary">
+    <section id="proyectos" class=" bg-secundary/85">
       <SectionContainer>
         <Proyectos/>
       </SectionContainer>
-    </div>
+      <ItemSeparated color="fill-primary" type="lit"/>
+    </section>
     
 
-    <div id="experiencia" class="h-screen bg-blue-700">
+    <section id="experiencia" class="h-screen">
       <SectionContainer>
-        <div>
-          Hola
-        </div>
+        <Experiencia>hola</Experiencia>
       </SectionContainer>
-    </div>
+    </section>
+
+    <section id="about" class="h-screen">
+
+    </section>
 </Layout>
