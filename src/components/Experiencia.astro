@@ -1,16 +1,29 @@
 ---
   import CardAcademy from "./CardAcademy.astro"
+  import '@fontsource/luckiest-guy';
 ---
-<div class="">
+<div class="mb-0">
+  <h2 class="text-white text-4xl my-12 text-right">&lt; Experiencia /&gt;</h2>
 
-  <CardAcademy clases="">
-    <h3 class="text-lg font-bold font-serif text-white">Título del Estudio</h3>
-    <p class="text-sm text-gray-300">2022 - 2023</p>
-    <p class="mt-2 text-gray-400">Descripción breve del estudio realizado.</p>
-  </CardAcademy>
-  <div>hola</div>
+  <div class="flex justify-center">
+    <div class="relative timeline w-full" id="timeline">
 
-  <div class="relative  w-full max-w-3xl" id="timeline">
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 timeline-line"></div>
+      <div class="flex flex-col items-center relative">
+        <div class="w-full flex justify-star relative">
+          <CardAcademy clases="">
+            <h3 class="text-lg font-bold font-serif text-white">Bootcamp - Helsinki</h3>
+            <p class="text-sm text-gray-300">2024 - 2025</p>
+            <p class="mt-2 text-gray-400">Descripción breve del estudio realizado.</p>
+          </CardAcademy>
+          <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-red-500 rounded-full border-4 border-black"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- <div class="relative timeline w-full max-w-3xl" id="timeline">
     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 timeline-line"></div>
     <div class="flex flex-col items-center relative">
       
@@ -34,10 +47,13 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 </div>
 
 <style>
+  h2{
+    font-family: 'Luckiest Guy', system-ui;
+  }
   /* Estilo base para la línea central */
   .timeline-line {
       position: absolute;
