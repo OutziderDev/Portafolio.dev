@@ -1,6 +1,6 @@
 ---
 import '@fontsource/luckiest-guy';
-import Github from '../assets/icons/Github.astro';
+import Github from '../assets/icons/Github.svg';
 const {titulo,demoUrl,gitUrl,descripcion,image,stack} = Astro.props 
 ---
 
@@ -47,7 +47,7 @@ const {titulo,demoUrl,gitUrl,descripcion,image,stack} = Astro.props
         >
           <span class=" flex items-center gap-2">
             Github
-            <Github class="size-4"/>
+            {Github}
           </span>
       </a>
 

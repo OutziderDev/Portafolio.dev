@@ -1,13 +1,16 @@
 ---
-import Github from "../assets/icons/Github.astro"
+import GithubIcon   from "../assets/icons/Github.svg"
+
 import CvFile from "../assets/icons/CvFile.astro"
 import LinkedIn from "../assets/icons/LinkedIn.astro"
 import PillItem from "./PillItem.astro"
 ---
 <div class="flex flex-col gap-y-2 md:flex-row items-center justify-center mt-7 gap-x-3 ">
   <PillItem href="https://github.com/OutziderDev/">
-    <Github class="size-6 fill-white group-hover:fill-black"/>
-    Github
+<!--     <GithubIcon class="size-6 fill-white group-hover:fill-black"/>
+ --> 
+    <div innerHTML={GithubIcon} class="size-6 fill-white" ></div>
+        Github
   </PillItem>
   <PillItem href="https://www.linkedin.com/in/luis-barrios-de-le%C3%B3n-196401130/">
     <LinkedIn class="size-6 fill-cyan-500 group-hover:fill-cyan-500" />
