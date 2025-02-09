@@ -3,7 +3,7 @@ import '@fontsource/luckiest-guy';
 import Proyectos from "../components/Proyectos.astro"
 import Hero from "../components/Hero.astro"
 import Layout from "../layouts/Layout.astro"
-import ItemSeparated from '../assets/ItemSeparated.astro';
+import ItemSeparated from '../components/ItemSeparated.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Formacion from '../components/Formacion.astro';
 ---
@@ -22,13 +22,16 @@ import Formacion from '../components/Formacion.astro';
       <ItemSeparated color="fill-primary" type="lit"/>
     </section>
     
-
     <section id="experiencia" class="">
       <SectionContainer>
         <Formacion/>
       </SectionContainer>
     </section>
-
-    <section id="about" class="h-screen bg-slate-600">
+    
+    <section id="about" class="h-screen bg-secundary/85">
+      <ItemSeparated color="fill-primary" type="triangulo"/>
+      <SectionContainer>
+        <h1>Hola</h1>
+      </SectionContainer>
     </section>
 </Layout>

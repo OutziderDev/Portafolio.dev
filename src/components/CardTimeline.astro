@@ -1,10 +1,10 @@
 ---
 const { titulo,subtitulo,fecha,pos,descrip} = Astro.props;
 ---
-<div class={`w-full flex justify-end md:justify-${pos}  items-center `}>
+<div class={`w-full flex justify-end md:justify-${pos} slide-in-top  items-center`}>
   <div class={`p-6 overflow-hidden bg-black border w-4/5 md:w-2/5 border-gray-400/30 relative rounded-2xl card-spotlight `} data-spotlight>
     <h3 class="text-lg font-bold font-serif text-white">{titulo}</h3>
-    <p class="text-sm text-gray-400 font-semibold">{subtitulo}</p>
+    <p class="text-sm bg-gradient-to-b from-red-600 to-red-400 text-transparent text-clip bg-clip-text font-semibold">{subtitulo}</p>
     <p class="text-sm text-white font-bold">{fecha}</p>
     <p class="mt-2 text-gray-400">{descrip}</p>
   </div>
@@ -26,13 +26,17 @@ const { titulo,subtitulo,fecha,pos,descrip} = Astro.props;
         
         card.style.setProperty("--mouse-x", `${x}px`);
         card.style.setProperty("--mouse-y", `${y}px`);
-        card.style.setProperty("--spotlight-color", "rgba(255,0,0,0.5)");
+        card.style.setProperty("--spotlight-color", "rgba(255,255,255,0.3)");
       })
     });
   });
 </script>
 
 <style>
+  .card-spotlight{
+    will-change:scroll-position;
+  }
+
   .card-spotlight::before {
     content: "";
     position: absolute;
@@ -50,4 +54,25 @@ const { titulo,subtitulo,fecha,pos,descrip} = Astro.props;
   .card-spotlight:focus-within::before {
     opacity: 0.6;
   }
+
+  /** CSS para el Scroll Animation */
+  @keyframes slideTop {
+    from {
+		transform: translateY(200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+  }
+
+  .slide-in-top {
+/* 	view-timeline-name: --slide-top;
+	view-timeline-axis: block;
+ */	animation: slideTop ease-in-out;
+	animation-timeline: view();
+	animation-range: entry 10% cover 40%;
+}
+
 </style>
