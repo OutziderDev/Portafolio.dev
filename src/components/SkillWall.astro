@@ -11,7 +11,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
     <div class="marquee__group  flex items-center justify-around gap-x-4">
       {items.map((Item,index) => (
           <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-24"/>
+            <Item key={index} class="fill-white size-16"/>
             <span class="opacity-0 group-hover:opacity-100 transition-all">
               {componentNames[index]}
             </span>
@@ -22,7 +22,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
     <div class="marquee__group flex items-center justify-around gap-x-4" aria-hidden="true">
       {items.map((Item,index) => (
         <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-24"/>
+            <Item key={index} class="fill-white size-16"/>
             <span class="opacity-0 group-hover:opacity-100 transition-all">
               {componentNames[index]}
             </span>
@@ -35,7 +35,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
     <div class="marquee__group shrink-0 flex items-center justify-around gap-x-4">
       {items.map((Item,index) => (
           <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-24"/>
+            <Item key={index} class="fill-white size-16"/>
             <span class="opacity-0 group-hover:opacity-100 transition-all">
               {componentNames[index]}
             </span>
@@ -45,7 +45,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
     <div class="marquee__group shrink-0 flex items-center justify-around gap-x-4" aria-hidden="true">
       {items.map((Item,index) => (
         <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-24"/>
+            <Item key={index} class="fill-white size-16"/>
             <span class="opacity-0 group-hover:opacity-100 transition-all">
               {componentNames[index]}
             </span>

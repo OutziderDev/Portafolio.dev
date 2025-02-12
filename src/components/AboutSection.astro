@@ -1,12 +1,29 @@
 ---
 import '@fontsource/luckiest-guy';
 import SkillWall from './SkillWall.astro';
+import perfil from '../assets/perfil.webp'
 
 ---
 
 <section>
   <h2 class="text-white text-4xl my-12">Conoce más sobre mí!</h2>
-  <SkillWall  />  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+    <div class="py-5">
+      <h3 class="font-bold">¿Quien Soy? </h3>
+      <p class="text-white/75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum iusto repudiandae, dignissimos debitis eum rem sit quidem tenetur ratione, temporibus cum obcaecati perferendis saepe dolor a beatae totam itaque deserunt?</p>
+      <br>
+      <p class="text-white/75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ad earum aliquid. Delectus quo beatae necessitatibus repellat, perferendis laboriosam quas quis soluta, amet natus eveniet asperiores! Quasi optio totam doloremque.</p>
+    </div>
+
+    <div class="hidden md:inline-flex items-center justify-center py-5">  
+      <img src="src/assets/perfil.webp" class="rounded-md object-cover aspect-video size-72 grayscale hover:grayscale-0 hover:scale-125 rotate-2 hover:rotate-6 transition-all" alt="Luis Barrios">
+    </div>
+
+    <div class="col-span-2 ">
+      <h3 class="font-bold my-10 text-2xl">Tecnologias en las cual tengo conocimientos:</h3>
+      <SkillWall  />  
+    </div>
+  </div>
 </section>
 
 <style>
