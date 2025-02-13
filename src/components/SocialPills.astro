@@ -6,7 +6,7 @@ import Gmail from "../assets/Gmail.astro"
 import PillItem from "./PillItem.astro"
 
 ---
-<div class="flex flex-col gap-y-2 md:flex-row items-center justify-center mt-7 gap-x-3 ">
+<div class="flex flex-col gap-y-2 md:flex-row items-center justify-center mt-5 gap-x-3 ">
   <PillItem href="https://github.com/OutziderDev/">
     <GithubIcon class="size-6 fill-white group-hover:fill-black" />
     Github
@@ -21,8 +21,6 @@ import PillItem from "./PillItem.astro"
   </PillItem> 
   <button
     type="button" 
-    data-tooltip-target="tooltip-click"
-    data-tooltip-trigger="click"
     id="copyButton" 
     class="p-2 border border-gray-400/50 rounded-lg 
       flex gap-x-2 group
@@ -31,17 +29,15 @@ import PillItem from "./PillItem.astro"
     <Gmail class="size-6"/>
     Gmail
   </button>
-  <div id="tooltip-click" role="tooltip" class="absolute z-10 invisible opacity-0  inline-block px-3 py-2 text-sm font-medium text-white bg-red-900 rounded-lg shadow-xs ">
-    Tooltip content
-    <div class="tooltip-arrow" data-popper-arrow></div>
-  </div>
 </div>
-
+<div id="tooltip" class="hidden mt-2 text-green-500 border border-green-500 self-center p-2 rounded-xl transition-all">
+  <p>¡Correo Copiado! Utiliza Ctrl + V</p>
+</div>
 
 <script>
   const email = "luisbarrios0110@gmail.com"
   const copyButton = document.getElementById("copyButton")!
-  const tooltip = document.getElementById("tooltip-click")!
+  const tooltip = document.getElementById("tooltip")!
 
   // Función para mostrar y ocultar el tooltip
   const toggleTooltip = () => {
@@ -49,10 +45,6 @@ import PillItem from "./PillItem.astro"
       tooltip.classList.remove("opacity-0", "invisible");
       tooltip.classList.add("opacity-100", "pointer-events-auto");
       
-      // Posicionar el tooltip cerca del botón
-      const buttonRect = copyButton.getBoundingClientRect();
-      tooltip.style.left = `${buttonRect.left + buttonRect.width / 2 - tooltip.offsetWidth / 2}px`;
-      tooltip.style.top = `${buttonRect.top - tooltip.offsetHeight - 10}px`; // Ajuste para que se muestre encima del botón
     } else {
       tooltip.classList.add("opacity-0", "visible");
       tooltip.classList.remove("opacity-100", "pointer-events-auto");
