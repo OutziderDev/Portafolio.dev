@@ -8,7 +8,7 @@ import Formacion from '../components/Formacion.astro';
 import AboutSection from '../components/AboutSection.astro'
 ---
 <Layout >
-  
+  <main>
     <SectionContainer>
       <Hero/>
     </SectionContainer>
@@ -28,10 +28,11 @@ import AboutSection from '../components/AboutSection.astro'
       </SectionContainer>
     </section>
     
-    <section id="about" class="bg-secundary/85">
+    <section id="about" class="bg-red-900/50">
       <ItemSeparated color="fill-primary" type="triangulo"/>
       <SectionContainer>
         <AboutSection/>
       </SectionContainer>
     </section>
+  </main>    
 </Layout>
