@@ -2,19 +2,38 @@
 import GithubIcon   from "../assets/icons/Github.astro"
 import CvFileIcon from "../assets/CvFile.astro"
 import LinkedInIcon from "../assets/LinkedIn.astro"
+import Gmail from "../assets/Gmail.astro"
 import PillItem from "./PillItem.astro"
+
 ---
 <div class="flex flex-col gap-y-2 md:flex-row items-center justify-center mt-7 gap-x-3 ">
   <PillItem href="https://github.com/OutziderDev/">
-    <GithubIcon class="size-6 fill-cyan-500 group-hover:fill-cyan-500" />
-        Github
+    <GithubIcon class="size-6 fill-white group-hover:fill-black" />
+    Github
   </PillItem>
   <PillItem href="https://www.linkedin.com/in/luis-barrios-de-le%C3%B3n-196401130/">
     <LinkedInIcon class="size-6 fill-cyan-500 group-hover:fill-cyan-500" />
     LinkedIn
   </PillItem>
-  <PillItem href="#">
-    <CvFileIcon class="size-6 fill-teal-400 group-hover:fill-teal-500" />
+  <PillItem href="/CV.pdf">
+    <CvFileIcon class="size-6  group-hover:fill-teal-500" />
     Currículum
-  </PillItem>  
+  </PillItem> 
+  <button 
+    id="copyButton" 
+    class="p-2 border border-gray-400/50 rounded-lg 
+      flex gap-x-2 group
+      hover:bg-white hover:text-black hover:scale-110 
+      transition-all duration-300">
+  <Gmail class="size-6"/>
+  Gmail
+</button>
 </div>
+
+<script>
+  const email = "luisbarrios0110@gmail.com"
+
+  document.getElementById("copyButton")?.addEventListener("click", () => {
+    navigator.clipboard.writeText(email)
+  })
+</script>
