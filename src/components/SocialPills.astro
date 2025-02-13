@@ -19,21 +19,53 @@ import PillItem from "./PillItem.astro"
     <CvFileIcon class="size-6  group-hover:fill-teal-500" />
     Currículum
   </PillItem> 
-  <button 
+  <button
+    type="button" 
+    data-tooltip-target="tooltip-click"
+    data-tooltip-trigger="click"
     id="copyButton" 
     class="p-2 border border-gray-400/50 rounded-lg 
       flex gap-x-2 group
       hover:bg-white hover:text-black hover:scale-110 
       transition-all duration-300">
-  <Gmail class="size-6"/>
-  Gmail
-</button>
+    <Gmail class="size-6"/>
+    Gmail
+  </button>
+  <div id="tooltip-click" role="tooltip" class="absolute z-10 invisible opacity-0  inline-block px-3 py-2 text-sm font-medium text-white bg-red-900 rounded-lg shadow-xs ">
+    Tooltip content
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
 </div>
+
 
 <script>
   const email = "luisbarrios0110@gmail.com"
+  const copyButton = document.getElementById("copyButton")!
+  const tooltip = document.getElementById("tooltip-click")!
 
-  document.getElementById("copyButton")?.addEventListener("click", () => {
+  // Función para mostrar y ocultar el tooltip
+  const toggleTooltip = () => {
+    if (tooltip.classList.contains("opacity-0")) {
+      tooltip.classList.remove("opacity-0", "invisible");
+      tooltip.classList.add("opacity-100", "pointer-events-auto");
+      
+      // Posicionar el tooltip cerca del botón
+      const buttonRect = copyButton.getBoundingClientRect();
+      tooltip.style.left = `${buttonRect.left + buttonRect.width / 2 - tooltip.offsetWidth / 2}px`;
+      tooltip.style.top = `${buttonRect.top - tooltip.offsetHeight - 10}px`; // Ajuste para que se muestre encima del botón
+    } else {
+      tooltip.classList.add("opacity-0", "visible");
+      tooltip.classList.remove("opacity-100", "pointer-events-auto");
+    }
+  };
+
+  // Función para copiar al portapapeles
+  const copyToClipboard = () => {
     navigator.clipboard.writeText(email)
-  })
+  };
+
+  copyButton.addEventListener("click", () => {
+    copyToClipboard(); // Copiar al portapapeles
+    toggleTooltip(); // Mostrar el tooltip
+  });
 </script>
