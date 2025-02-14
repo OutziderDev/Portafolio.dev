@@ -3,9 +3,18 @@ import '@fontsource/luckiest-guy';
 import Github from '../assets/icons/Github.astro';
 const icons = import.meta.glob("../assets/icons/*.astro", {eager: true})
 const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro.props 
-const filteredIcons = Object.entries(icons)
+
+/*const filteredIcons =Object.values(icons).map(module =>( module as {default:any}).default) /* = Object.entries(icons)
+.map(([path, mod]) => {
+    const name = path.match(/\/([^/]+)\.astro$/)?.[1]; // Extraer el nombre
+    return { name, mod: mod.default };
+  })
+  .filter(({ name }) => stack.includes(name))
+  .map(({ mod }) => mod) */
+  const filteredIcons = Object.entries(icons)
   .filter(([path]) => stack.includes(path.split("/").pop().replace(".astro", "")))
   .map(([, mod]) => mod.default)
+
 ---
 
 <div  class='bg-primary rounded-3xl  overflow-hidden border-black gradient-border p-1 relative'>
@@ -33,11 +42,7 @@ const filteredIcons = Object.entries(icons)
             </div>
           </span>
       </a>
-      <a href={gitUrl} 
-         target="_blank" 
-         rel="noopener noreferrer"
-         class="bg-white text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit p-2 leading-none group"
-        >
+      <a href={gitUrl} target="_blank" rel="noopener noreferrer" class="bg-white text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit p-2 leading-none group">
           <span class=" flex items-center gap-2">
             Github
             <Github class="size-4"/>
@@ -48,8 +53,12 @@ const filteredIcons = Object.entries(icons)
         {descripcion}
       </p>
 
-      <div class="flex gap-2">
-        {stack.map(s => <span> {s}</span> )}
+      <div class="flex gap-2 border-t border-gray-500 pt-2 px-4">
+        {
+          filteredIcons.map((Icon) => {
+            return <Icon class="size-6 fill-white"/>
+          })
+        }
       </div>
 
     </div>

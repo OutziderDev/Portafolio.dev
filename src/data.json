@@ -8,7 +8,7 @@
       "gitUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part5/BlogListFrontend",
       "descripcion": "Es una web SPA para que las personas puedan registrar sus blogs y poder compartirlos con los usuarios, este proyecto forma parte de los examenes de FSO de Helsinki",
       "image": "blogApp.webp",
-      "stack": ["JavaScript","Git","Tailwind","Express"],
+      "stack": ["JavaScript","ReactJs","Github","Tailwind","Express"],
       "disable": true
     },
     {
@@ -19,7 +19,7 @@
       "gitUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part7/Countries-Hook",
       "descripcion": "En esta web los usuarios pueden obtener informacion curiosa y basica de distintos paises sobre el cual tenga interes. Este Proyecto Forma parde de FSO ",
       "image": "weaterApp.webp",
-      "stack": ["JavaScript","Git","Tailwind","TanStack"],
+      "stack": ["ReactJs","JavaScript","Github","Tailwind","TanStack"],
       "disable": true
     },
     {
@@ -30,7 +30,7 @@
       "gitUrl": "https://github.com/OutziderDev/Portafolio.dev",
       "descripcion": "Pagina web simple para la presentacion de mi curriculum mediante un portafolio digital y mostrar informacion sobre mí",
       "image": "portafolio.webp",
-      "stack": ["Astro","JavaScript","Tailwind","Git"],
+      "stack": ["Aastro","JavaScript","Tailwind","Github"],
       "disable": false
     }
   ],
