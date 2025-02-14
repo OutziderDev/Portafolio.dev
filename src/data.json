@@ -1,6 +1,17 @@
 {
   "proyectos": [
     {
+      "titulo": "Portafolio Web",
+      "type": "WEB",
+      "fecha": 2025,
+      "demoUrl": "https://github.com/OutziderDev/Portafolio.dev",
+      "gitUrl": "https://github.com/OutziderDev/Portafolio.dev",
+      "descripcion": "Pagina web simple para la presentacion de mi curriculum mediante un portafolio digital y mostrar informacion sobre mí",
+      "image": "portafolio.webp",
+      "stack": ["Aastro","JavaScript","Tailwind","Github"],
+      "disable": false
+    },
+    {
       "titulo": "Blog App - FSO",
       "type": "SPA",
       "fecha": 2024,
@@ -21,17 +32,6 @@
       "image": "weaterApp.webp",
       "stack": ["ReactJs","JavaScript","Github","Tailwind","TanStack"],
       "disable": true
-    },
-    {
-      "titulo": "Portafolio Web",
-      "type": "WEB",
-      "fecha": 2025,
-      "demoUrl": "https://github.com/OutziderDev/Portafolio.dev",
-      "gitUrl": "https://github.com/OutziderDev/Portafolio.dev",
-      "descripcion": "Pagina web simple para la presentacion de mi curriculum mediante un portafolio digital y mostrar informacion sobre mí",
-      "image": "portafolio.webp",
-      "stack": ["Aastro","JavaScript","Tailwind","Github"],
-      "disable": false
     }
   ],
   "estudios": [

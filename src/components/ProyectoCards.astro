@@ -1,20 +1,15 @@
 ---
 import '@fontsource/luckiest-guy';
 import Github from '../assets/icons/Github.astro';
+import { Image } from 'astro:assets';
 const icons = import.meta.glob("../assets/icons/*.astro", {eager: true})
 const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro.props 
 
-/*const filteredIcons =Object.values(icons).map(module =>( module as {default:any}).default) /* = Object.entries(icons)
-.map(([path, mod]) => {
-    const name = path.match(/\/([^/]+)\.astro$/)?.[1]; // Extraer el nombre
-    return { name, mod: mod.default };
-  })
-  .filter(({ name }) => stack.includes(name))
-  .map(({ mod }) => mod) */
-  const filteredIcons = Object.entries(icons)
-  .filter(([path]) => stack.includes(path.split("/").pop().replace(".astro", "")))
-  .map(([, mod]) => mod.default)
-
+const filteredIcons = Object.entries(icons)
+.filter(([path]) => {
+  const lastSegment = path.split("/").pop()
+  return stack.includes((lastSegment ?? "").replace(".astro", ""))})
+.map(([, mod]) => (mod as {default:any}).default)
 ---
 
 <div  class='bg-primary rounded-3xl  overflow-hidden border-black gradient-border p-1 relative'>
@@ -53,10 +48,10 @@ const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro
         {descripcion}
       </p>
 
-      <div class="flex gap-2 border-t border-gray-500 pt-2 px-4">
+      <div class="flex gap-2 border-t border-gray-500 pt-2 px-4 -mb-3">
         {
           filteredIcons.map((Icon) => {
-            return <Icon class="size-6 fill-white"/>
+            return <Icon class="size-7 fill-white"/>
           })
         }
       </div>
@@ -64,7 +59,9 @@ const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro
     </div>
 
     <div class="relative">
-      <img
+      <Image
+        width={1200}
+        height={700}
         class="mt-8 -mb-4 rounded-t-3xl border-4 border-b-0 object-cover  lg:border-r-0 border-zinc-300/30 lg:w-auto lg:absolute  lg:h-full lg:max-w-none lg:hover:scale-105 delay-200 transition"
         src=`/src/assets/${image}`
         alt="Preview del proyecto"
@@ -93,7 +90,7 @@ const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro
       var(--gradient-color-2),
       var(--gradient-color-3)
     );
-    animation: rotate 8s linear infinite;
+    animation: rotate 6s linear infinite;
   }
 
   @keyframes rotate {
