@@ -40,7 +40,6 @@ import PillItem from "./PillItem.astro"
   const copyButton = document.getElementById("copyButton")!
   const tooltip = document.getElementById("tooltip")!
 
-  // Función para mostrar y ocultar el tooltip
   const toggleTooltip = () => {
     if (tooltip.classList.contains("invisible")) {
       tooltip.classList.remove("invisible");
@@ -49,12 +48,11 @@ import PillItem from "./PillItem.astro"
       setTimeout(() => {
         tooltip.classList.remove("visible");
         tooltip.classList.add("invisible");
-      }, 2000);
+      }, 1500);
       
     }
   };
 
-  // Función para copiar al portapapeles
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email)
   };

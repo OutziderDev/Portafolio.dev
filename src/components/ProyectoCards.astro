@@ -44,11 +44,11 @@ const filteredIcons = Object.entries(icons)
           </span>
       </a>
 
-      <p class="border-t border-gray-500 mt-3 py-2">
+      <p class="border-t border-gray-500 mt-3 py-2 text-wrap">
         {descripcion}
       </p>
 
-      <div class="flex gap-2 border-t border-gray-500 pt-2 px-4 -mb-3">
+      <div class="flex gap-2 border-t border-gray-500 pt-2 px-4 -mb-4">
         {
           filteredIcons.map((Icon) => {
             return <Icon class="size-7 fill-white"/>
