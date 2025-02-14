@@ -1,37 +1,12 @@
 ---
-import '@fontsource/luckiest-guy';
-import Cards from './Cards.astro';
-
-const proyectos = [
-  {
-    titulo: "FSO - Blog App",
-    demoUrl: "https://github.com/OutziderDev/FullStack/tree/main/Part5/BlogListFrontend",
-    gitUrl: "https://github.com/OutziderDev/FullStack/tree/main/Part5/BlogListFrontend",
-    descripcion: "Es una web SPA para que las personas puedan registrar sus blogs y poder compartirlos con los usuarios, este proyecto forma parte de los examenes de FSO de Helsinki",
-    image: "blogApp.webp"
-  },
-  {
-    titulo: "FSO - Countr Data",
-    demoUrl: "https://github.com/OutziderDev/FullStack/tree/main/Part7/Countries-Hook",
-    gitUrl: "https://github.com/OutziderDev/FullStack/tree/main/Part7/Countries-Hook",
-    descripcion: "En esta web los usuarios pueden obtener informacion curiosa y basica de distintos paises sobre el cual tenga interes. Este Proyecto Forma parde de FSO ",
-    image: "weaterApp.webp"
-  },
-  {
-    titulo: "Portafolio Web",
-    demoUrl: "https://github.com/OutziderDev/Portafolio.dev",
-    gitUrl: "https://github.com/OutziderDev/Portafolio.dev",
-    descripcion: "Pagina web simple para la presentacion de mi curriculum mediante un portafolio digital y mostrar informacion sobre mí",
-    image: "portafolio.webp",
-    stack: ["Js","Astro","Tailwind","Git"]
-  }
-]
+import Cards from './ProyectoCards.astro'
+import data from '../data.json'
 ---
 <section class="mb-0">
   <h2 class="text-white font-Luckiest text-4xl my-12">&lt; Proyectos /&gt;</h2>
 
   <div class="flex flex-col gap-y-4 ">
-    {proyectos.map( proyecto => <Cards {...proyecto}/>)}
+    {data.proyectos.map( proyecto => <Cards {...proyecto}/>)}
   </div>
 
 </section>

@@ -1,18 +1,18 @@
 ---
 import '@fontsource/luckiest-guy';
 import Github from '../assets/icons/Github.astro';
-const {titulo,demoUrl,gitUrl,descripcion,image,stack} = Astro.props 
+const icons = import.meta.glob("../assets/icons/*.astro", {eager: true})
+const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro.props 
+const filteredIcons = Object.entries(icons)
+  .filter(([path]) => stack.includes(path.split("/").pop().replace(".astro", "")))
+  .map(([, mod]) => mod.default)
 ---
 
 <div  class='bg-primary rounded-3xl  overflow-hidden border-black gradient-border p-1 relative'>
   <div class="grid lg:grid-cols-2 lg:gap-16 bg-primary p-4 rounded-3xl overflow-hidden">
     <div class="pb-4">
-      <div
-        class="inline-flex font-serif gap-2 bg-gradient-to-b from-rose-600 from-20%  to-rose-400 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm"
-      >
-        <span>SPA</span>
-        <span>-</span>
-        <span>2024</span>
+      <div class="inline-flex font-serif gap-2 bg-gradient-to-b from-rose-600 from-20%  to-rose-400 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm">
+        <span>{type} - {fecha}</span>
       </div>
 
       <h3 class="text-3xl  mt-2 md:text-4xl md:mt-4">
@@ -22,9 +22,9 @@ const {titulo,demoUrl,gitUrl,descripcion,image,stack} = Astro.props
       <a href={demoUrl} 
          target="_blank" 
          rel="noopener noreferrer"
-         class="bg-white text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"
+         class={ disable ? 'bg-gray-400 pointer-events-none text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4  md:w-fit px-3 py-2 leading-none ' :  "bg-white text-gray-950 w-full rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"}
         >
-          <span class="flex items-center gap-2 group"> 
+          <span class="flex items-center gap-2 group" > 
             Demo
             <div class="group-hover:-rotate-45 transition ">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -48,8 +48,8 @@ const {titulo,demoUrl,gitUrl,descripcion,image,stack} = Astro.props
         {descripcion}
       </p>
 
-      <div>
-        stack
+      <div class="flex gap-2">
+        {stack.map(s => <span> {s}</span> )}
       </div>
 
     </div>
