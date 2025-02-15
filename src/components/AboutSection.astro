@@ -1,36 +1,41 @@
 ---
+import { Image } from 'astro:assets';
 import SkillWall from './SkillWall.astro';
 ---
-
-<section>
+<article>
   <h2 class="text-white font-Luckiest text-4xl my-12">Conoce más sobre mí!</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 ">
     <div class="py-5">
-      <h3 class="font-bold">¿Quien Soy? </h3>
       <p class="text-white/80 tracking-wide">
-        Entusiasta por las nuevas tecnologías, tanto de software como de hardware, el aprendizaje continuo y la enseñanza. 
-        <b class="text-green-500">Más de 1 año de experiencia en el desarrollo de sistemas y páginas web.</b>  
-        Gracias a mi formación académica, he participado en diversos proyectos donde adquirí conocimientos básicos en una variedad de lenguajes de programación, 
-        <b class="text-green-500">frameworks para el Front-end y el Back-end, así como bases de datos.</b> 
-        Además, he utilizado diversas tecnologías y herramientas de diseño y edición.
+        Soy un entusiasta por las nuevas tecnologías, tanto de software como de hardware, el aprendizaje continuo y la enseñanza. 
+        <b class="text-rose-500">Cuento con 1 año de experiencia en el desarrollo de sistemas y páginas web.</b>
+      </p>
+      <p class="text-white/80 tracking-wide"> 
+        Además, he utilizado varias tecnologías y herramientas de diseño y edición.
       </p>
       <p class="text-white/80 mt-2 tracking-wide">
-        Aplico mis habilidades y conocimientos tanto en proyectos colaborativos como independientes, 
+        Vivo en Panamá, desde donde aplico mis habilidades y conocimientos tanto en proyectos colaborativos como independientes, 
         con el objetivo de ofrecer soluciones personalizadas, innovadoras, escalables y alineadas con las mejores prácticas de programación.
       </p>
-      <!-- <p class="text-white/75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum iusto repudiandae, dignissimos debitis eum rem sit quidem tenetur ratione, temporibus cum obcaecati perferendis saepe dolor a beatae totam itaque deserunt?</p>
-      <br>
-      <p class="text-white/75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ad earum aliquid. Delectus quo beatae necessitatibus repellat, perferendis laboriosam quas quis soluta, amet natus eveniet asperiores! Quasi optio totam doloremque.</p>
-     -->
+      <p class="text-white/80 mt-2 tracking-wide">
+        Entre mis hobbys se encuentra el desarrollo de puzzles, hacer senderismos y la lectura.
+      </p>
+      
     </div>
 
-    <div class="hidden md:inline-flex items-center justify-center py-5">  
-      <img src="src/assets/perfil.webp" class="rounded-md object-cover aspect-video size-72 grayscale hover:grayscale-0 hover:scale-125 rotate-2 hover:rotate-6 transition-all" alt="Luis Barrios">
+    <div class="inline-flex items-center justify-center py-5">  
+      <Image
+        height={1} 
+        width={1} 
+        src=`/src/assets/perfil.webp` 
+        class="rounded-md object-cover aspect-video size-72 grayscale hover:grayscale-0 hover:scale-125 rotate-2 hover:rotate-6 transition-all" 
+        alt="Luis Barrios"
+      >
     </div>
 
     <div class="col-span-2 ">
-      <h3 class="font-bold my-10 text-2xl">Tecnologias en las cual tengo conocimientos:</h3>
+      <h3 class="font-bold my-10 text-2xl">Áreas tecnológicas en las que tengo conocimientos:</h3>
       <SkillWall  />  
     </div>
   </div>
-</section>
+</article>
