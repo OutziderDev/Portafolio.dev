@@ -3,27 +3,26 @@ import { Image } from 'astro:assets';
 import SkillWall from './SkillWall.astro';
 ---
 <article>
-  <h2 class="text-white font-Luckiest text-4xl my-12">Conoce más sobre mí!</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 ">
-    <div class="py-5">
+  <h2 class="text-white font-Luckiest text-4xl my-10 text-balance">Descubre más sobre mí</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-wrap">
+    <div class="py-5 col-span-2 md:col-span-1 order-2 md:order-1">
       <p class="text-white/80 tracking-wide">
-        Soy un entusiasta por las nuevas tecnologías, tanto de software como de hardware, el aprendizaje continuo y la enseñanza. 
-        <b class="text-rose-500">Cuento con 1 año de experiencia en el desarrollo de sistemas y páginas web.</b>
+        Soy un apasionado por la tecnología, disfruto explorando tanto el mundo del software como del hardware. Me motiva el aprendizaje constante y compartir conocimientos con otros. 
+        <b class="text-rose-500">Cuento con más de un año de experiencia en el desarrollo de sistemas y aplicaciones web.</b>
       </p>
-      <p class="text-white/80 tracking-wide"> 
-        Además, he utilizado varias tecnologías y herramientas de diseño y edición.
-      </p>
-      <p class="text-white/80 mt-2 tracking-wide">
-        Vivo en Panamá, desde donde aplico mis habilidades y conocimientos tanto en proyectos colaborativos como independientes, 
-        con el objetivo de ofrecer soluciones personalizadas, innovadoras, escalables y alineadas con las mejores prácticas de programación.
+      <p class="text-white/80 tracking-wide">
+        En mi trayectoria, también he trabajado con distintas herramientas de diseño, edición y optimización de contenido.
       </p>
       <p class="text-white/80 mt-2 tracking-wide">
-        Entre mis hobbys se encuentra el desarrollo de puzzles, hacer senderismos y la lectura.
+        Actualmente resido en Panamá, donde aplico mis conocimientos en proyectos tanto colaborativos como individuales, 
+        desarrollando soluciones eficientes, escalables y alineadas con buenas prácticas de programación.
       </p>
-      
+      <p class="text-white/80 mt-2 tracking-wide">
+        En mi tiempo libre disfruto resolviendo puzzles, explorando la naturaleza a través del senderismo y sumergiéndome en la lectura.
+      </p>
     </div>
 
-    <div class="inline-flex items-center justify-center py-5">  
+    <div class="flex items-center justify-center py-5 order-1 md:order-2">  
       <Image
         height={1} 
         width={1} 
@@ -33,7 +32,7 @@ import SkillWall from './SkillWall.astro';
       >
     </div>
 
-    <div class="col-span-2 ">
+    <div class="col-span-2 order-3">
       <h3 class="font-bold my-10 text-2xl">Áreas tecnológicas en las que tengo conocimientos:</h3>
       <SkillWall  />  
     </div>

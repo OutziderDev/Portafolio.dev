@@ -6,7 +6,7 @@ const componentNames = Object.keys(components).map(path =>
 const items = Object.values(components).map(module =>( module as {default:any}).default)
 ---
 
-<article  class="flex flex-col gap-y-8 " >
+<article  class="flex flex-col gap-y-8 gap-x-3" >
   <div class="marquee relative flex overflow-hidden justify-start w-full select-none" id="marquee">
     <div class="marquee__group  flex items-center justify-around gap-x-4">
       {items.map((Item,index) => (
@@ -19,7 +19,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
         ))
       }
     </div>
-    <div class="marquee__group flex items-center justify-around gap-x-4" aria-hidden="true">
+    <div class="marquee__group flex items-center justify-around gap-x-4">
       {items.map((Item,index) => (
         <button class="hover:-rotate-6 hover:scale-105 transition group">  
             <Item key={index} class="fill-white size-16"/>
@@ -42,7 +42,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
           </button>))
       }
     </div>
-    <div class="marquee__group shrink-0 flex items-center justify-around gap-x-4" aria-hidden="true">
+    <div class="marquee__group shrink-0 flex items-center justify-around gap-x-4" >
       {items.map((Item,index) => (
         <button class="hover:-rotate-6 hover:scale-105 transition group">  
             <Item key={index} class="fill-white size-16"/>
@@ -79,7 +79,7 @@ const items = Object.values(components).map(module =>( module as {default:any}).
 
 <style>
   :root {
-    --duration: 25s;
+    --duration: 20s;
   }
 
   .marquee {
