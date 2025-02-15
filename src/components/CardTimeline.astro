@@ -1,14 +1,14 @@
 ---
 const { titulo,subtitulo,fecha,pos,descrip} = Astro.props;
 ---
-<div class={`w-full flex justify-end md:justify-${pos} slide-in-top  items-center`}>
+<div class={`w-full slide-in-top flex justify-end ${pos}`}>
   <div class={`p-6 overflow-hidden bg-black border w-4/5 md:w-2/5 border-gray-400/30 relative rounded-2xl card-spotlight `} data-spotlight>
     <h3 class="text-lg font-bold font-serif text-white">{titulo}</h3>
     <p class="text-sm bg-gradient-to-b from-red-600 to-red-400 text-transparent text-clip bg-clip-text font-semibold">{subtitulo}</p>
     <p class="text-sm text-white font-bold">{fecha}</p>
     <p class="mt-2 text-gray-400">{descrip}</p>
   </div>
-  <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-12 h-6 bg-red-500 rounded-full border-4 border-primary"></div>
+  <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-7 bg-red-500 rounded-full border-4 border-primary"></div>
 </div>
 
 <script is:inline>
