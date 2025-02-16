@@ -10,35 +10,38 @@ import Contacto from "../components/Contacto.astro";
 ---
 <Layout >
   <main>
-    <SectionContainer>
+    <SectionContainer id="hero">
       <Hero/>
     </SectionContainer>
     <ItemSeparated color="fill-secundary/80" type="wave"/>
 
-    <section id="proyectos" class=" bg-secundary/80">
-      <SectionContainer id="proyectos" class=" bg-secundary/80">
+    <section  class=" bg-secundary/80">
+      <SectionContainer id="proyectos">
         <Proyectos/>
       </SectionContainer>
       <ItemSeparated color="fill-primary" type="lit"/>
     </section>
     
-    <section id="experiencia" class="">
-      <SectionContainer>
-        <Formacion/>
-      </SectionContainer>
-    </section>
+    <SectionContainer id="experiencia">
+      <Formacion/>
+    </SectionContainer>
     
-    <section id="about" class="bg-gradient-to-b from-secundary/80 to-primary to-90%">
+    <section class="bg-gradient-to-b from-secundary/80 to-primary to-90%">
       <ItemSeparated color="fill-primary" type="triangulo"/>
-      <SectionContainer>
+      <SectionContainer id="about">
         <AboutSection/>
       </SectionContainer>
     </section>
 
-
-    <div id="contacto" class="h-screen">
-      <SectionContainer>
+    <div class="h-screen">
+      <SectionContainer id="contacto">
         <Contacto/>        
+      </SectionContainer>
+    </div>
+
+    <div class="h-screen">
+      <SectionContainer id="footer">
+
       </SectionContainer>
     </div>
     

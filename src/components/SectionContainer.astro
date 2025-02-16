@@ -1,5 +1,6 @@
 ---
+const id = Astro.props.id
 ---
-<section class="container mx-auto p-3 text-white max-w-5xl">
+<section id={id} class=`container mx-auto p-3  text-white max-w-5xl`>
   <slot/>
 </section>
