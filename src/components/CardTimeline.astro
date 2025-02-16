@@ -1,7 +1,7 @@
 ---
-const { titulo,subtitulo,fecha,pos,descrip} = Astro.props;
+const { titulo,subtitulo,fecha,pos ,descrip} = Astro.props;
 ---
-<div class={`w-full slide-in-top flex justify-end ${pos}`}>
+<div class={`w-full slide-in-top flex items-center ${pos}`}>
   <div class={`p-6 overflow-hidden bg-black border w-4/5 md:w-2/5 border-gray-400/30 relative rounded-2xl card-spotlight `} data-spotlight>
     <h3 class="text-lg font-bold font-serif text-white">{titulo}</h3>
     <p class="text-sm bg-gradient-to-b from-red-600 to-red-400 text-transparent text-clip bg-clip-text font-semibold">{subtitulo}</p>

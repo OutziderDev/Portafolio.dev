@@ -46,7 +46,7 @@
       "titulo": "Curso de Figma para Devs",
       "subtitulo": "Midudev Academy",
       "fecha": "2025",
-      "pos": "justify-end ",
+      "pos": "justify-end",
       "descrip": "Es un curso de Figma enfocado en desarrolladores, donde se aprende a diseñar interfaces, colaborar con equipos de diseño y optimizar el flujo de trabajo. Ideal para mejorar la comunicación entre diseño y desarrollo en proyectos web."
     },
     {
@@ -60,7 +60,7 @@
       "titulo": "Ing. Desarrollo de Software",
       "subtitulo": "Universidad Tecnológica de Panamá",
       "fecha": "2016 - 2019",
-      "pos": "justify-end ",
+      "pos": "justify-end",
       "descrip": "Bajo la Facultad de Ingeniería de Sistemas Computacionales, culminé mis estudios, adquiriendo conocimientos en lógica de programación, desarrollo de aplicaciones en diversos lenguajes, bases de datos y otras tecnologías."
     }
   ]
