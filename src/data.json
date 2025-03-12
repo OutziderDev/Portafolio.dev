@@ -12,6 +12,17 @@
       "disable": false
     },
     {
+      "titulo": "C.G Properties",
+      "type": "WEB",
+      "fecha": 2025,
+      "demoUrl": "cg-properties-project-one.vercel.app",
+      "gitUrl": "https://github.com/OutziderDev/CGProperties-Project",
+      "descripcion": "Proyecto profesional para un cliente quien deseaba tener su web para ofertar sus productos y servicios manteniendo el control de su contenido en todo momento.",
+      "image": "portafolio.webp",
+      "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
+      "disable": false
+    },
+    {
       "titulo": "Blog App - FSO",
       "type": "SPA",
       "fecha": 2024,
