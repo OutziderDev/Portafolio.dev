@@ -18,7 +18,7 @@
       "demoUrl": "cg-properties-project-one.vercel.app",
       "gitUrl": "https://github.com/OutziderDev/CGProperties-Project",
       "descripcion": "Proyecto profesional para un cliente quien deseaba tener su web para ofertar sus productos y servicios manteniendo el control de su contenido en todo momento.",
-      "image": "portafolio.webp",
+      "image": "c.g.p.webp",
       "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
       "disable": false
     },
