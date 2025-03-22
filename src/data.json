@@ -23,6 +23,17 @@
       "disable": false
     },
     {
+      "titulo": "La Velada del Año Oficial",
+      "type": "Landing Page",
+      "fecha": 2025,
+      "demoUrl": "https://www.infolavelada.com/",
+      "gitUrl": "https://github.com/midudev/la-velada-web-oficial",
+      "descripcion": "Desarrollo de la Landing Page de  La velada del año de Ibai llanos de Codigo Abierto",
+      "image": "",
+      "stack": ["Aastro","Tailwind","Github"],
+      "disable": false
+    },
+    {
       "titulo": "Blog App - FSO",
       "type": "SPA",
       "fecha": 2024,
