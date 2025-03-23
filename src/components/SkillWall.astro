@@ -1,5 +1,5 @@
 ---
-const components = import.meta.glob("../assets/icons/*.astro", {eager: true})
+const components = import.meta.glob("../assets/icons/*.svg", {eager: true})
 const componentNames = Object.keys(components).map(path => 
   path.split('/').pop()?.replace('.astro', '')
 );
@@ -7,7 +7,8 @@ const items = Object.values(components).map(module =>( module as {default:any}).
 ---
 
 <article  class="flex flex-col gap-y-8 gap-x-3" >
-  <div class="marquee relative flex overflow-hidden justify-start w-full select-none" id="marquee">
+  <p>Hola</p>
+    <div class="marquee relative flex overflow-hidden justify-start w-full select-none" id="marquee">
     <div class="marquee__group  flex items-center justify-around gap-x-4">
       {items.map((Item,index) => (
           <button class="hover:-rotate-6 hover:scale-105 transition group">  
