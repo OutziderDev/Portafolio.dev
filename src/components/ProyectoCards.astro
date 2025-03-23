@@ -1,8 +1,8 @@
 ---
 import '@fontsource/luckiest-guy';
-import Github from '../assets/icons/Github.astro';
+import Github from '../assets/icons/Github.svg';
 import { Image } from 'astro:assets';
-const icons = import.meta.glob("../assets/icons/*.astro", {eager: true})
+const icons = import.meta.glob("../assets/icons/*.svg", {eager: true})
 const {titulo,demoUrl,gitUrl,descripcion,image,stack,disable,type,fecha} = Astro.props 
 
 const filteredIcons = Object.entries(icons)
