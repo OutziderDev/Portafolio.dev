@@ -2,6 +2,7 @@
   "proyectos": [
     {
       "titulo": "Portafolio Web",
+      "slug": "portafolio-web",
       "type": "WEB",
       "fecha": 2025,
       "demoUrl": "https://github.com/OutziderDev/Portafolio.dev",
@@ -13,6 +14,7 @@
     },
     {
       "titulo": "C.G Properties",
+      "slug": "cg-properties",
       "type": "WEB",
       "fecha": 2025,
       "demoUrl": "cg-properties-project-one.vercel.app",
@@ -24,6 +26,7 @@
     },
     {
       "titulo": "La Velada del Año",
+      "slug": "la-velada-oficial",
       "type": "Landing Page",
       "fecha": 2025,
       "demoUrl": "https://www.infolavelada.com/",
@@ -35,6 +38,7 @@
     },
     {
       "titulo": "Blog App - FSO",
+      "slug": "blog-app-fso",
       "type": "SPA",
       "fecha": 2024,
       "demoUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part5/BlogListFrontend",
@@ -46,6 +50,7 @@
     },
     {
       "titulo": "Country Data - FSO",
+      "slug": "country-data-fso",
       "type": "WEB",
       "fecha": 2024,
       "demoUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part7/Countries-Hook",
