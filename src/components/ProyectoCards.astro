@@ -11,7 +11,7 @@ const filteredIcons = Object.entries(icons)
 .map(([, mod]) => (mod as {default:any}).default)
 ---
 
-<div id="proyecto-card" data-slug={slug} role="link" class="cursor-pointer">
+<div data-slug={slug} role="link" class="proyecto-card cursor-pointer">
   <div  class='bg-primary rounded-3xl  overflow-hidden border-black gradient-border p-1 relative'>
     <div class="grid lg:grid-cols-2 lg:gap-16 bg-primary p-4 rounded-3xl overflow-hidden">
       <div class="pb-4">
@@ -71,15 +71,18 @@ const filteredIcons = Object.entries(icons)
   </div>
 </div>
 
-<script>
-  const contenedor = document.getElementById("proyecto-card")
-  if (contenedor) {
-    const data = contenedor.dataset.slug
-    console.log('el slug', data )
-  }
-  /* document.getElementById("proyecto-card")?.addEventListener("click", () => {
-    
-  }) */
+<script >
+  
+    const contenedores = document.querySelectorAll(".proyecto-card")
+    if (contenedores) {
+      contenedores.forEach( contenedor => {
+        contenedor.addEventListener('click', () => {
+          const slug = contenedor.dataset.slug
+          console.log('el dato es:', slug)
+        })
+      })
+    }
+  
 </script>
 
 <style>
