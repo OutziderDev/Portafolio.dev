@@ -72,17 +72,18 @@ const filteredIcons = Object.entries(icons)
 </div>
 
 <script >
-  
+  document.addEventListener("DOMContentLoaded", () => {
     const contenedores = document.querySelectorAll(".proyecto-card")
     if (contenedores) {
-      contenedores.forEach( contenedor => {
+      contenedores.forEach( (contenedor )  => {
         contenedor.addEventListener('click', () => {
-          const slug = contenedor.dataset.slug
-          console.log('el dato es:', slug)
+          const div = contenedor as HTMLElement
+          const slug = div.dataset.slug
+          window.location.href= `/proyectos/${slug}`
         })
       })
     }
-  
+  })
 </script>
 
 <style>
