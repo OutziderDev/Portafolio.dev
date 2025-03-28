@@ -1,12 +1,13 @@
 ---
 import Cards from './ProyectoCards.astro'
-import data from '../data.json'
+import { proyectos } from '../consts/proyectos'
+
 ---
 <article class="mb-0">
   <h2 class="text-white font-Luckiest text-4xl my-12">&lt; Proyectos /&gt;</h2>
 
   <div class="flex flex-col gap-y-4 ">
-    {data.proyectos.map( proyecto => <Cards {...proyecto}/>)}
+    {proyectos.map( proyecto => <Cards {...proyecto}/>)}
   </div>
 
 </article>
