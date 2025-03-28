@@ -1,8 +1,7 @@
 ---
-import Github from '../assets/icons/Github.svg';
 import { Image } from 'astro:assets';
 const icons = import.meta.glob("../assets/icons/*.svg", {eager: true})
-const {titulo,demoUrl,gitUrl,descripcion,thumb,stack,estado,type,fecha,slug,categoria} = Astro.props 
+const {titulo,descripcion,thumb,stack,estado,type,fecha,slug,categoria} = Astro.props 
 
 const filteredIcons = Object.entries(icons)
 .filter(([path]) => {
@@ -11,72 +10,51 @@ const filteredIcons = Object.entries(icons)
 .map(([, mod]) => (mod as {default:any}).default)
 ---
 
-<div data-slug={slug} role="link" class="proyecto-card cursor-pointer bg-primary rounded-3xl  overflow-hidden border-black gradient-border p-1 relative">
-  <div  class=''>
-    <div class="grid lg:grid-cols-2 lg:gap-16 bg-primary p-4 rounded-3xl overflow-hidden">
-      <div class="pb-4">
-        <div class="inline-flex font-serif gap-2 bg-gradient-to-b from-rose-600 from-20%  to-rose-400 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm">
-          <span>{type} - {fecha}</span>
-        </div>
-  
-        <h3 class="text-3xl  mt-2 md:text-4xl md:mt-4">
-          {titulo}
-        </h3>
-        <div class="flex gap-2 w-full">
-          {
-            estado ? '' : <div class="px-4 py-1 my-3 text-sm bg-yellow-200  rounded-3xl text-black font-semibold">En Curso</div>
-          }
-          {categoria.map((cat : String) =>  
-            <div class="px-4 py-1 my-3 flex items-center text-sm justify-center text-pretty bg-white rounded-3xl text-black font-semibold">{cat}</div>
-           )
-          }
-          <!-- <a href={demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class={ disable ? 'bg-gray-400 pointer-events-none w-full text-gray-950  rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4  md:w-fit px-3 py-2 leading-none ' :  "bg-white w-full text-gray-950 rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"}
-            >
-              <span class="flex items-center gap-2 group" >
-                Demo
-                <div class="group-hover:-rotate-45 transition ">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </div>
-              </span>
-          </a>
-          <a href={gitUrl} target="_blank" rel="noopener noreferrer" class="bg-white w-full text-gray-950  rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit p-2 leading-none group">
-              <span class=" flex items-center gap-2">
-                Github
-                <Github class="size-4"/>
-              </span>
-          </a> -->
-        </div>
-        <p class="border-t border-gray-500 mt-3 py-2 text-wrap">
-          {descripcion}
-        </p>
-  
-        <div class="flex gap-2 border-t border-gray-500 pt-2 px-4 -mb-4">
-          {
-            filteredIcons.map((Icon) => {
-              return <Icon class="size-7 fill-white"/>
-            })
-          }
-        </div>
-  
+<div data-slug={slug} role="link" class='proyecto-card cursor-pointer bg-primary rounded-3xl hover:scale-[1.02]  overflow-hidden border-black gradient-border p-1 relative transition-transform duration-200'>
+  <div class="grid lg:grid-cols-2 lg:gap-16 bg-primary p-4 rounded-3xl overflow-hidden">
+    <div class="pb-4">
+      <div class="inline-flex font-serif gap-2 bg-gradient-to-b from-rose-600 from-20%  to-rose-400 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm">
+        <span>{type} - {fecha}</span>
       </div>
-  
-      <div class="relative">
-        <Image
-          width={1200}
-          height={900}
-          class="mt-8 -mb-4 rounded-t-3xl border-4 border-b-0 object-cover  lg:border-r-0 border-zinc-300/30 lg:max-w-lg lg:absolute  lg:h-full  lg:hover:scale-105 delay-200 transition"
-          src=`/${thumb}`
-          alt="Preview del proyecto"
-        />
+
+      <h3 class="text-3xl  mt-2 md:text-4xl md:mt-4">
+        {titulo}
+      </h3>
+      <div class="flex gap-2 w-full">
+        {
+          estado ? '' : <div class="px-4 py-1 my-3 text-sm bg-green-400  rounded-3xl text-black font-semibold">En Curso</div>
+        }
+        {categoria.map((cat : String) =>  
+          <div class="px-4 py-1 my-3 flex items-center text-sm justify-center text-pretty bg-white rounded-3xl text-black font-semibold">{cat === "Desarrollo" ? `💻 Desarrollo` : `🖌️ Diseño UX/UI`}</div>
+          )
+        }      
       </div>
+      <p class="border-t border-gray-500 mt-3 py-2 text-wrap">
+        {descripcion}
+      </p>
+
+      <div class="flex gap-2 border-t border-gray-500 pt-2 px-4 -mb-4">
+        {
+          filteredIcons.map((Icon) => {
+            return <Icon class="size-7 fill-white"/>
+          })
+        }
+      </div>
+
+    </div>
+
+    <div class="relative">
+      <Image
+        width={1200}
+        height={900}
+        class="mt-8 -mb-4 rounded-t-3xl border-4 border-b-0 object-cover  lg:border-r-0 border-zinc-300/30 lg:max-w-lg lg:absolute  lg:h-full  lg:hover:scale-105 delay-200 transition"
+        src=`/${thumb}`
+        alt="Preview del proyecto"
+      />
     </div>
   </div>
 </div>
+
 
 <script >
   document.addEventListener("DOMContentLoaded", () => {
@@ -107,14 +85,14 @@ const filteredIcons = Object.entries(icons)
   }
 
   .gradient-border {
-    background-image: linear-gradient(
-      var(--gradient-angle),
-      var(--gradient-color-1),
-      var(--gradient-color-2),
-      var(--gradient-color-3),
-    );
-    animation: rotate 6s linear infinite;
-  }
+      background-image: linear-gradient(
+        var(--gradient-angle),
+        var(--gradient-color-1),
+        var(--gradient-color-2),
+        var(--gradient-color-3)
+      );
+      animation: rotate 4s linear infinite;
+    }
 
   @keyframes rotate {
     from {
