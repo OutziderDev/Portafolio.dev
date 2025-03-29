@@ -2,47 +2,66 @@
 import Layout from "../../layouts/Layout.astro"
 import Footer from "../../components/Footer.astro"
 import {proyectos} from "../../consts/proyectos"
+import type { Proyecto } from "../../types/Proyecto"
+import  LeftArrow from '../../assets/LeftArrow.svg'
+
 export function getStaticPaths() {
   return  proyectos.map((proyecto) =>({ params: { proyecto: proyecto.slug } }))
 } 
 
 const slug = Astro.params.proyecto
-const selectData = proyectos.filter( proyecto => proyecto.slug === slug)
+const selectData : Proyecto | undefined = proyectos.find( proyecto => proyecto.slug === slug) 
+
 ---
 
 <Layout>
-  <main class="max-w-7xl mx-auto p-4">
-    <img src={`/${selectData[0].thumb}`} class="mt-20" alt="">
-    <div class="mt-20  text-white">
-        <ul class="flex gap-4 ">
-            <li class="rounded px-6 py-2 bg-gradient-to-b from-rose-300/10 to-rose-600/20">Proyecto 1</li>
-            <li class="rounded px-6 py-2 bg-gradient-to-b from-rose-300/10 to-rose-600/20">Proyecto 2</li>
-            <li class="rounded px-6 py-2 bg-gradient-to-b from-rose-300/10 to-rose-600/20">Proyecto 3</li>
-            <li class="rounded px-6 py-2 bg-gradient-to-b from-rose-300/10 to-rose-600/20">Proyecto 4</li>
-            <li class="rounded px-6 py-2 bg-gradient-to-b from-rose-300/10 to-rose-600/20">Proyecto 5</li>
-        </ul>
-        <!-- <a href={demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class={ disable ? 'bg-gray-400 pointer-events-none w-full text-gray-950  rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4  md:w-fit px-3 py-2 leading-none ' :  "bg-white w-full text-gray-950 rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"}
-          >
-            <span class="flex items-center gap-2 group" >
-              Demo
-              <div class="group-hover:-rotate-45 transition ">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-              </div>
-            </span>
-        </a>
-        <a href={gitUrl} target="_blank" rel="noopener noreferrer" class="bg-white w-full text-gray-950  rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit p-2 leading-none group">
-            <span class=" flex items-center gap-2">
-              Github
-              <Github class="size-4"/>
-            </span>
-        </a> -->
+  <main class=" bg-gradient-to-b from-secundary/50 from-1% to-black">
+
+    <div class="max-w-5xl mx-auto p-4">
+      <!-- Encabezado -->
+      <div class="mt-10 md:mt-20 mb-8 border-b border-white/70">
+        <a href="/" class="text-white/70 flex items-center justify-start animate-pulse "><LeftArrow/> Regresar</a>
+        <h1 class="text-5xl md:text-7xl text-center  text-pretty font-bold my-4 text-white">{selectData?.titulo }</h1>
+        
+        <div class="flex gap-1 md:gap-4 justify-center">
+          {
+            selectData?.categoria.map((cat : String) =>  
+            <div class="px-6 py-2 my-3 flex items-center text-md md:text-lg justify-center text-pretty bg-primary rounded-3xl text-white font-semibold">{cat === "Desarrollo" ? `💻 Desarrollo` : `🖌️ Diseño UX/UI`}</div>
+            )
+          } 
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <img src={`/${selectData?.thumb || 'ruta-default.jpg'}`} class="object-cover rounded-xl select-none min-h-[70vh]" alt={selectData?.titulo || 'Imagen no disponible'}>    <div class="mt-20  text-white">
+      
+      <!-- Contenido -->
+      <div>
+
+      </div>
+          <!-- <a href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={ disable ? 'bg-gray-400 pointer-events-none w-full text-gray-950  rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4  md:w-fit px-3 py-2 leading-none ' :  "bg-white w-full text-gray-950 rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit px-3 py-2 leading-none group"}
+            >
+              <span class="flex items-center gap-2 group" >
+                Demo
+                <div class="group-hover:-rotate-45 transition ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="size-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </span>
+          </a>
+          <a href={gitUrl} target="_blank" rel="noopener noreferrer" class="bg-white w-full text-gray-950  rounded-lg font-semibold inline-flex items-center justify-center gap-2 mt-4 active:scale-95 transition-transform hover:bg-white/90 md:w-fit p-2 leading-none group">
+              <span class=" flex items-center gap-2">
+                Github
+                <Github class="size-4"/>
+              </span>
+          </a> -->
+      
+      <Footer/>
     </div>
-    <Footer/>
 
   </main>
 </Layout>
