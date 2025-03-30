@@ -31,7 +31,12 @@ export const proyectos: Proyecto[] = [
       "demoUrl": "https://www.infolavelada.com/",
       "gitUrl": "https://github.com/midudev/la-velada-web-oficial",
       "descripcionCard": "Desarrollo de la landing page de La Velada del Año V, el evento icónico del streamer Ibai Llanos. Se trata de un proyecto de código abierto de Midudev, donde los desarrolladores y diseñadores pueden aportar ideas y mejoras durante su desarrollo.",
-      "descripcionPage" : {},
+      "descripcionPage" : {
+        "descripcion": "Estoy muy feliz de haber participado y contribuido al desarrollo del sitio web de La Velada del Año V, el evento icónico de Ibai Llanos. En este proyecto de código abierto liderado por Midudev, tuve la oportunidad de aportar mejoras al código, solucionar problemas y proponer nuevas ideas. Esta iniciativa no solo permite compartir conocimientos, sino que también brinda una gran experiencia de aprendizaje y colaboración para la comunidad de desarrolladores.",
+        "metas": ["Crear una Interfaz Intuitiva, Dinamica y Accesible", "Actualización Dinámica del Contenido", "Sistema Interactivo de Votación y Porras","Mantener Diseños Responsives","Integración con APIs"],
+        "Pd": "Este proyecto es desarrollado por Midudev, y su código oficial está disponible en su repositorio de GitHub. Actualmente, se encuentra en desarrollo, lo que permite a la comunidad aportar mejoras e ideas. Además, las tecnologías definitivas aún no han sido completamente establecidas.",
+        "Pr": "https://github.com/midudev/la-velada-web-oficial/pulls?q=is%3Apr+author%3AOutziderDev+",
+      },
       "thumb": "thumb-la-velada.webp",
       "imagen": "",
       "stack": ["Aastro","Tailwind","Github"],

@@ -5,6 +5,7 @@ import {proyectos} from "../../consts/proyectos"
 import Github from "../../assets/icons/Github.svg"
 import type { Proyecto } from "../../types/Proyecto"
 import  LeftArrow from '../../assets/LeftArrow.svg'
+import PrIcon from "../../assets/pr.svg"
 const icons = import.meta.glob("../../assets/icons/*.svg", {eager: true})
 
 export function getStaticPaths() {
@@ -60,7 +61,7 @@ const filteredIcons = Object.entries(icons)
           </ul>
 
           <!-- Caja de Skill Tech -->
-          <div class="mt-5 text-lg font-bold">
+          <div class="my-14 text-lg font-bold">
             <p>Herramientas o Tecnologías utilizadas en el proyecto: </p>
             <div class="flex gap-6 mt-2 border-t border-gray-500 pt-4 px-4 -mb-4">
               {
@@ -129,6 +130,18 @@ const filteredIcons = Object.entries(icons)
               </div>  
             </div>
             
+            <!-- Mostrar las PR -->
+            {
+              selectData?.descripcionPage.Pr ? 
+              <div class="mt-5">
+                <p class="font-semibold flex gap-2"><PrIcon/> Ver las Pull Request</p>
+                <a href={selectData?.descripcionPage.Pr} target="_blank" rel="noopener noreferrer">
+                  <img src="/pr.webp" class="object-cover my-5 h-20" alt=""/>
+                </a>
+              </div> 
+              : ""
+            }
+
           </div>
         </aside>
       </div>
