@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 const icons = import.meta.glob("../assets/icons/*.svg", {eager: true})
-const {titulo,descripcion,thumb,stack,estado,type,fecha,slug,categoria} = Astro.props 
+const {titulo,descripcionCard,thumb,stack,estado,type,fecha,slug,categoria} = Astro.props 
 
 const filteredIcons = Object.entries(icons)
 .filter(([path]) => {
@@ -30,7 +30,7 @@ const filteredIcons = Object.entries(icons)
         }      
       </div>
       <p class="border-t border-gray-500 mt-3 py-2 text-wrap">
-        {descripcion}
+        {descripcionCard}
       </p>
 
       <div class="flex gap-2 border-t border-gray-500 pt-2 px-4 -mb-4">
