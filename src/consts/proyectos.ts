@@ -11,7 +11,11 @@ export const proyectos: Proyecto[] = [
       "demoUrl": "https://cg-properties-project-one.vercel.app/",
       "gitUrl": "https://github.com/OutziderDev/CGProperties-Project",
       "descripcionCard": "Proyecto que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien necesita ofertar sus productos y servicios gestionando el contenido de la página en todo momento.",
-      "descripcionPage" : {},
+      "descripcionPage" : {
+        "descripcion": "Estoy muy contento de presentar este proyecto, el cual representó un nuevo reto para mí. Se trata de una solución que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien requiere ofertar sus productos y servicios mientras gestiona el contenido de la página en todo momento. Durante su desarrollo, tuve la oportunidad de aprender y aplicar herramientas que no dominaba por completo, lo que me permitió crecer profesionalmente y adquirir nuevos conocimientos.",
+        "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar","Gestión de Contenido en Tiempo Real","Galería de Imágenes en Estilo Collage","Integración con API","Almacenamiento Externo de Imágenes"],
+        "Pd": "Este proyecto es privado y cuenta con una licencia de no uso. Sin embargo, fue cancelado a último momento. A pesar de ello, decidí alojarlo de manera gratuita con fines de aprendizaje y visibilidad. Debido a las condiciones del servidor, si desean ver la demo, es posible que deban esperar aproximadamente un minuto para que se active."
+      },
       "thumb": "thumb-c.g.p.webp",
       "imagen": "",
       "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
