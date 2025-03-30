@@ -8,7 +8,7 @@ export const proyectos: Proyecto[] = [
       "estado": true,
       "categoria": ["Diseño UX/UI", "Desarrollo"],
       "fecha": 2025,
-      "demoUrl": "cg-properties-project-one.vercel.app",
+      "demoUrl": "https://cg-properties-project-one.vercel.app/",
       "gitUrl": "https://github.com/OutziderDev/CGProperties-Project",
       "descripcion": "Proyecto híbrido que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien necesita ofertar sus productos y servicios gestionando el contenido de la página en todo momento.",
       "thumb": "thumb-c.g.p.webp",
