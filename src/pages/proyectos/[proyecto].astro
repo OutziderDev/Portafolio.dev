@@ -80,6 +80,16 @@ const selectData : Proyecto | undefined = proyectos.find( proyecto => proyecto.s
               }
             </div>
 
+            <div class="mt-4">
+              <span class="font-semibold">Categoría:</span>
+              <div class="flex flex-col gap-2 mt-2">
+                {
+                  selectData?.categoria.map((cat : String) =>  
+                  <div class="py-1 flex items-center text-md md:text-lg justify-center text-pretty bg-gray-800/90 rounded-lg text-white font-semibold">{cat === "Desarrollo" ? `💻 Desarrollo` : `🖌️ Diseño UX/UI`}</div>
+                  )
+                }
+              </div>  
+            </div>
             
           </div>
         </aside>
