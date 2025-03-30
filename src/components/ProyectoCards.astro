@@ -22,7 +22,7 @@ const filteredIcons = Object.entries(icons)
       </h3>
       <div class="flex gap-2 w-full">
         {
-          estado ? '' : <div class="px-4 py-1 my-3 text-sm bg-green-400  rounded-3xl text-black font-semibold">En Curso</div>
+          estado ? '' : <div class="px-4 py-1 my-3 text-sm bg-yellow-400  rounded-3xl text-black font-semibold">En Curso</div>
         }
         {categoria.map((cat : String) =>  
           <div class="px-4 py-1 my-3 flex items-center text-sm justify-center text-pretty bg-white rounded-3xl text-black font-semibold">{cat === "Desarrollo" ? `💻 Desarrollo` : `🖌️ Diseño UX/UI`}</div>

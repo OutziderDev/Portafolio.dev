@@ -44,7 +44,7 @@ const selectData : Proyecto | undefined = proyectos.find( proyecto => proyecto.s
           }
         </article>
         <aside class="w-full lg:w-1/3 bg-gray-900/70  rounded-lg order-1 md:order-2">
-          <h3 class="border-b border-white/50 p-4 font-bold text-sm md:text-lg text-pretty">Características del proyecto</h3>
+          <h3 class="border-b border-white/50 p-4 font-bold text-lg text-pretty">Características del proyecto</h3>
 
           <div class="p-4">
 
@@ -70,10 +70,17 @@ const selectData : Proyecto | undefined = proyectos.find( proyecto => proyecto.s
                     </span>
                 </a> 
             </div>
-
-            <div>
-              <span>:</span>
+            
+            <div class="mt-4">
+              <span class="font-semibold">Estado del Proyecto:</span>
+              {
+                selectData?.estado ?
+                <div class="px-4 py-1 my-3 text-sm bg-green-400   text-center rounded-md text-black font-semibold">Terminado</div> 
+                : <div class="px-4 py-1 my-3 text-sm bg-yellow-400  text-center rounded-md text-black font-semibold">En Curso</div>
+              }
             </div>
+
+            
           </div>
         </aside>
       </div>
