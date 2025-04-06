@@ -98,7 +98,7 @@ export const proyectos: Proyecto[] = [
       "estado": true,
       "categoria": ["Diseño UX/UI", "Desarrollo"],
       "fecha": 2024,
-      "demoUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part7/Countries-Hook",
+      "demoUrl": "https://contriesinfo.vercel.app/",
       "gitUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part7/Countries-Hook",
       "descripcionCard": "Aplicación web que permite a los usuarios consultar datos básicos y curiosos sobre diversos países, como su población, idiomas y más. Consume una API  para obtener la información en tiempo real. Desarrollada como parte del curso de Fullstack Open ",
       "descripcionPage" : {
@@ -113,8 +113,8 @@ export const proyectos: Proyecto[] = [
         "Pd": "",
       },
       "thumb": "thumb-weaterApp.webp",
-      "imagen": "",
+      "imagen": "/videos/whaterApp.mp4",
       "stack": ["ReactJs","JavaScript","Github","Tailwind","TanStack"],
-      "disable": true
+      "disable": false
     }
   ]
