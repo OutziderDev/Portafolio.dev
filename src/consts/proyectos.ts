@@ -58,7 +58,7 @@ export const proyectos: Proyecto[] = [
         "Pd": "",
       },
       "thumb": "thumb-portafolio.webp",
-      "imagen": "",
+      "imagen": "/images/wallportafolio.webp",
       "stack": ["Aastro","JavaScript","Tailwind","Github"],
       "disable": false
     },
