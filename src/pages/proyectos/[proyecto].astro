@@ -41,12 +41,21 @@ const filteredIcons = Object.entries(icons)
       </div>
 
       <!-- Imagen -->
-      {selectData?.imagen ? 
-        <video class="object-cover rounded-md select-none min-h-[70vh]" autoplay muted loop>
-          <source src={`${selectData?.imagen}`} type="video/mp4"/>
-          Tu navegador no soporta el elemento de video.
-        </video> 
-        : 
+      {selectData?.imagen ?  (
+            /\.(mp4|webm|ogg|mov)$/i.test(selectData.imagen) ? (
+          <video class="object-cover rounded-md select-none min-h-[70vh]" autoplay muted loop>
+            <source src={selectData.imagen} type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        ) : (
+          <img
+            src={selectData.imagen}
+            class="object-cover rounded-xl select-none min-h-[70vh]"
+            alt={selectData?.titulo || 'Imagen'}
+            loading="lazy"
+          />
+        )
+      ): 
         <img src={`/${selectData?.thumb || 'ruta-default.jpg'}`} class="object-cover rounded-xl select-none min-h-[70vh]" alt={selectData?.titulo || 'Imagen no disponible'}/>   
       }
       
