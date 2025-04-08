@@ -17,7 +17,7 @@ export const proyectos: Proyecto[] = [
         "Pd": "Este proyecto es privado y cuenta con una licencia de no uso. Sin embargo, fue cancelado a último momento. A pesar de ello, decidí alojarlo de manera gratuita con fines de aprendizaje y visibilidad. Debido a las condiciones del servidor, si desean ver la demo, es posible que deban esperar aproximadamente un minuto para que se active."
       },
       "thumb": "thumb-c.g.p.webp",
-      "imagen": "",
+      "imagen": "/images/wallcgp-project.webp",
       "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
       "disable": false
     },
