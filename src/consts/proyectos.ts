@@ -42,7 +42,7 @@ export const proyectos: Proyecto[] = [
       "stack": ["Aastro","Tailwind","Github"],
       "disable": false
     },
-    {
+    /* {
       "titulo": "Portafolio Web",
       "slug": "portafolio-web",
       "type": "WEB",
@@ -61,7 +61,7 @@ export const proyectos: Proyecto[] = [
       "imagen": "/images/wallportafolio.webp",
       "stack": ["Aastro","JavaScript","Tailwind","Github"],
       "disable": false
-    },
+    }, */
     {
       "titulo": "Blog App - FSO",
       "slug": "blog-app-fso",

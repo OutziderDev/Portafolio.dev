@@ -3,10 +3,10 @@ import Cards from './ProyectoCards.astro'
 import { proyectos } from '../consts/proyectos'
 
 ---
-<article class="mb-0">
+<article class="mb-52">
   <h2 class="text-white font-bold text-4xl lg:text-6xl my-12">&lt; Proyectos /&gt;</h2>
 
-  <div class="flex flex-col gap-y-4 ">
+  <div class="flex flex-col gap-y-12 ">
     {proyectos.map( proyecto => <Cards {...proyecto}/>)}
   </div>
 

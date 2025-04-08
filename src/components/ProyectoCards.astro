@@ -10,7 +10,7 @@ const filteredIcons = Object.entries(icons)
 .map(([, mod]) => (mod as {default:any}).default)
 ---
 
-<div data-slug={slug} role="link" class='proyecto-card cursor-pointer bg-primary rounded-3xl hover:scale-[1.02]  overflow-hidden border-black p-1 relative transition-transform duration-200'>
+<div data-slug={slug} role="link" class='proyecto-card cursor-pointer bg-primary rounded-3xl hover:scale-[1.02] border border-black hover:border-white   overflow-hidden  relative transition-transform duration-200'>
   <div class="grid lg:grid-cols-2 lg:gap-16 bg-primary p-4 rounded-3xl overflow-hidden">
     <div class="pb-4">
       <div class="inline-flex font-serif gap-2 bg-gradient-to-b from-rose-600 from-20%  to-rose-400 bg-clip-text text-transparent uppercase font-bold tracking-widest text-sm">
@@ -47,7 +47,7 @@ const filteredIcons = Object.entries(icons)
       <Image
         width={1200}
         height={900}
-        class="mt-8 -mb-4 rounded-t-3xl border-4 border-b-0 object-cover  lg:border-r-0 border-zinc-300/30 lg:max-w-lg lg:absolute  lg:h-full  lg:hover:scale-105 delay-200 transition"
+        class="mt-8 -mb-4 rounded-t-3xl  border-b-0 object-cover  lg:border-r-0 border-zinc-300/30 lg:max-w-lg lg:absolute  lg:h-full  lg:hover:scale-105 delay-200 transition"
         src=`/${thumb}`
         alt="Preview del proyecto"
       />
@@ -72,39 +72,7 @@ const filteredIcons = Object.entries(icons)
 </script>
 
 <style>
-  @property --gradient-angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  :root {
-    --gradient-color-1: red;
-    --gradient-color-2: rgba(255, 255, 255, 0.625);
-    --gradient-color-3: black;
-  }
-
-  .gradient-border {
-      background-image: linear-gradient(
-        var(--gradient-angle),
-        var(--gradient-color-1),
-        var(--gradient-color-2),
-        var(--gradient-color-3)
-      );
-      animation: rotate 4s linear infinite;
-    }
-
-  @keyframes rotate {
-    from {
-      --gradient-angle: 0deg;
-    }
-    to {
-      --gradient-angle: 360deg;
-    }
-  }
-
-  h3 {
-    font-family: 'Luckiest Guy', system-ui;
-  }
+  
+ 
 
 </style>
