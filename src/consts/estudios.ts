@@ -1,6 +1,6 @@
 export const estudios = [
     {
-      "titulo": "Bootcamp - FullStackOpen",
+      "titulo": "Full Stack Open",
       "subtitulo": "Universidad de Helsinki",
       "fecha": "2024 - 2025",
       "pos": "justify-start",
