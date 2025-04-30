@@ -1,13 +1,23 @@
 ---
 import Cards from './ProyectoCards.astro'
 import { proyectos } from '../consts/proyectos'
-
+import SectionContainer from './SectionContainer.astro'
+import ItemSeparated from './ItemSeparated.astro'
 ---
-<article class="mb-52">
-  <h2 class="text-white font-bold text-4xl lg:text-6xl my-12">&lt; Proyectos /&gt;</h2>
+<section >
+  <ItemSeparated color="fill-secundary/60" type="wave"/>
 
-  <div class="flex flex-col gap-y-12 ">
-    {proyectos.map( proyecto => <Cards {...proyecto}/>)}
+  <div class="bg-secundary/60">
+    <SectionContainer id="proyectos" >
+      <div class="mb-52 ">
+        <h2 class="text-white font-bold text-4xl lg:text-6xl my-12">&lt; Proyectos /&gt;</h2>
+        <div class="flex flex-col gap-y-12 ">
+          {proyectos.map( proyecto => <Cards {...proyecto}/>)}
+        </div>
+      </div>
+    </SectionContainer>
   </div>
 
-</article>
+  <ItemSeparated color="fill-secundary/60" type="slice"/>
+
+</section>
