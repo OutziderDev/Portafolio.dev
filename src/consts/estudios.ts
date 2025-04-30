@@ -1,4 +1,6 @@
-export const estudios = [
+import type { Estudios } from "../types/Estudios";
+
+export const estudios : Estudios[] = [
     {
       "titulo": "Full Stack Open",
       "subtitulo": "Universidad de Helsinki",

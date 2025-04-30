@@ -1,6 +1,6 @@
 ---
   import CardTimeline from './CardTimeline.astro'
-  import data from "../data.json"
+  import { estudios } from '../consts/estudios'
 ---
 <div class="mb-0">
   <h2 class="text-white text-5xl my-12 font-bold flex items-center justify-center gap-3">
@@ -19,7 +19,7 @@
 
       <div class="flex flex-col  gap-y-2">
         {
-          data.estudios.map( estudio => <CardTimeline {...estudio} />)
+          estudios.map( estudio => <CardTimeline {...estudio} />)
         }
 
       </div>
