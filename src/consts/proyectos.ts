@@ -2,23 +2,23 @@ import type { Proyecto } from "../types/Proyecto"
 
 export const proyectos: Proyecto[] = [
     {
-      "titulo": "C.G Properties",
-      "slug": "cg-properties",
-      "type": "WEB",
+      "titulo": "Cositos De Lana",
+      "slug": "cositos-de-lana",
+      "type": "Landing Page",
       "estado": true,
       "categoria": ["Diseño UX/UI", "Desarrollo"],
       "fecha": 2025,
-      "demoUrl": "https://cg-properties-project-one.vercel.app/",
-      "gitUrl": "https://github.com/OutziderDev/CGProperties-Project",
-      "descripcionCard": "Proyecto que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien necesita ofertar sus productos y servicios gestionando el contenido de la página en todo momento.",
+      "demoUrl": "https://cositos-de-lana.vercel.app/",
+      "gitUrl": "https://github.com/OutziderDev/CositosDeLana",
+      "descripcionCard": "Sitio web freelance desarrollado para dar visibilidad a un emprendimiento de tejidos artesanales, con un diseño moderno y enfoque en la experiencia del usuario.",
       "descripcionPage" : {
-        "descripcion": "Estoy muy contento de presentar este proyecto, el cual representó un nuevo reto para mí. Se trata de una solución que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien requiere ofertar sus productos y servicios mientras gestiona el contenido de la página en todo momento. Durante su desarrollo, tuve la oportunidad de aprender y aplicar herramientas que no dominaba por completo, lo que me permitió crecer profesionalmente y adquirir nuevos conocimientos.",
-        "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar","Gestión de Contenido en Tiempo Real","Galería de Imágenes en Estilo Collage","Integración con API","Almacenamiento Externo de Imágenes"],
-        "Pd": "Este proyecto es privado y cuenta con una licencia de no uso. Sin embargo, fue cancelado a último momento. A pesar de ello, decidí alojarlo de manera gratuita con fines de aprendizaje y visibilidad. Debido a las condiciones del servidor, si desean ver la demo, es posible que deban esperar aproximadamente un minuto para que se active."
+        "descripcion": "",
+        "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar"],
+        "Pd": ""
       },
-      "thumb": "thumb-c.g.p.webp",
-      "imagen": "/images/wallcgp-project.webp",
-      "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
+      "thumb": "cositosDeLana.png",
+      "imagen": "cositosDeLana.png",
+      "stack": ["Aastro","Tailwind","Github"],
       "disable": false
     },
     {
@@ -40,6 +40,26 @@ export const proyectos: Proyecto[] = [
       "thumb": "thumb-la-velada.webp",
       "imagen": "",
       "stack": ["Aastro","Tailwind","Github"],
+      "disable": false
+    },
+    {
+      "titulo": "C.G Properties",
+      "slug": "cg-properties",
+      "type": "WEB",
+      "estado": true,
+      "categoria": ["Diseño UX/UI", "Desarrollo"],
+      "fecha": 2025,
+      "demoUrl": "https://cg-properties-project-one.vercel.app/",
+      "gitUrl": "https://github.com/OutziderDev/CGProperties-Project",
+      "descripcionCard": "Proyecto que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien necesita ofertar sus productos y servicios gestionando el contenido de la página en todo momento.",
+      "descripcionPage" : {
+        "descripcion": "Estoy muy contento de presentar este proyecto, el cual representó un nuevo reto para mí. Se trata de una solución que combina diferentes tecnologías para cumplir las necesidades de un cliente, quien requiere ofertar sus productos y servicios mientras gestiona el contenido de la página en todo momento. Durante su desarrollo, tuve la oportunidad de aprender y aplicar herramientas que no dominaba por completo, lo que me permitió crecer profesionalmente y adquirir nuevos conocimientos.",
+        "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar","Gestión de Contenido en Tiempo Real","Galería de Imágenes en Estilo Collage","Integración con API","Almacenamiento Externo de Imágenes"],
+        "Pd": "Este proyecto es privado y cuenta con una licencia de no uso. Sin embargo, fue cancelado a último momento. A pesar de ello, decidí alojarlo de manera gratuita con fines de aprendizaje y visibilidad. Debido a las condiciones del servidor, si desean ver la demo, es posible que deban esperar aproximadamente un minuto para que se active."
+      },
+      "thumb": "thumb-c.g.p.webp",
+      "imagen": "/images/wallcgp-project.webp",
+      "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
       "disable": false
     },
     /* {
@@ -104,11 +124,11 @@ export const proyectos: Proyecto[] = [
       "descripcionPage" : {
         "descripcion": "Aplicación web que permite a los usuarios consultar datos sobre diversos países, como su población, idiomas y moneda, a través de una API que obtiene la información en tiempo real. Desarrollada como parte del curso Full Stack Open, este proyecto me permitió trabajar tanto en el frontend como en la integración de APIs, creando una interfaz fácil de usar y dinámica.",
         "metas": [
-          "Construir la Interfaz de Usuario con un Diseño Atractivo y Funcional",
-          "Implementar un Diseño Responsivo para Adaptarse a Diferentes Dispositivos",
-          "Consumir APIs Externas para Obtener Información en Tiempo Real",
-          "Crear Hooks Personalizados para Optimizar la Gestión de Componentes",
-          "Gestionar el Estado Global de la Aplicación de Forma Eficiente"
+          "Construir la interfaz de usuario con un diseño atractivo y funcional",
+          "Implementar un diseño responsivo para adaptarse a diferentes dispositivos",
+          "Consumir APIs externas para obtener información en tiempo real",
+          "Crear Hooks personalizados para optimizar la gestión de componentes",
+          "Gestionar el estado global de la aplicación de forma eficiente"
         ],
         "Pd": "",
       },
