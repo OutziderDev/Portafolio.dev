@@ -16,8 +16,8 @@ export const proyectos: Proyecto[] = [
         "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar"],
         "Pd": ""
       },
-      "thumb": "cositosDeLana.png",
-      "imagen": "cositosDeLana.png",
+      "thumb": "thumb-cositosdelana.webp",
+      "imagen": "",
       "stack": ["Aastro","Tailwind","Github"],
       "disable": false
     },
