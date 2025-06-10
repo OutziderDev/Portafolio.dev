@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import SkillWall from './SkillWall.astro';
+import SkillWall from '../components/SkillWall.astro';
 ---
 <article>
   <h2 class="text-white font-bold text-4xl my-10 text-balance">Descubre más sobre mí</h2>
@@ -26,7 +26,7 @@ import SkillWall from './SkillWall.astro';
       <Image
         height={1} 
         width={1} 
-        src=`/perfil.webp` 
+        src=`/files/perfil.webp` 
         class="rounded-md object-cover aspect-video size-80 grayscale hover:grayscale-0 hover:scale-110  hover:rotate-3 transition-all duration-200" 
         alt="Luis Barrios"
       >

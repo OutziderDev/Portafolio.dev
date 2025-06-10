@@ -62,26 +62,6 @@ export const proyectos: Proyecto[] = [
       "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
       "disable": false
     },
-    /* {
-      "titulo": "Portafolio Web",
-      "slug": "portafolio-web",
-      "type": "WEB",
-      "estado": true,
-      "categoria": ["Diseño UX/UI", "Desarrollo"],
-      "fecha": 2025,
-      "demoUrl": "/",
-      "gitUrl": "https://github.com/OutziderDev/Portafolio.dev",
-      "descripcionCard": "Portafolio digital donde presento mi experiencia en el desarrollo de software, mis habilidades y proyectos de forma profesional. También incluyo información sobre mí, enlaces a mis proyectos, entre otros",
-      "descripcionPage" : {
-        "descripcion": "Estoy orgulloso de presentar mi portafolio digital, un espacio diseñado para compartir mi experiencia en el desarrollo de software, mis habilidades y los proyectos en los que he trabajado de manera profesional. A través de este sitio, no solo muestro mi trayectoria, sino que también ofrezco una visión más cercana sobre mi trabajo, mi enfoque en la resolución de problemas y mi pasión por la tecnología. Además, aquí podrás conocer más sobre mí, explorar mis creaciones y acceder a enlaces a mis proyectos y colaboraciones.",
-        "metas": ["Crear una Interfaz Intuitiva, Dinamica y Accesible", "Actualizar el Contenido de Forma Dinámica y Automática", "Mantener un Diseño Responsivo para Todos los Dispositivos","Ofrecer Accesos Directos a Proyectos y Recursos Profesionales"],
-        "Pd": "",
-      },
-      "thumb": "thumb-portafolio.webp",
-      "imagen": "/images/wallportafolio.webp",
-      "stack": ["Aastro","JavaScript","Tailwind","Github"],
-      "disable": false
-    }, */
     {
       "titulo": "Blog App - FSO",
       "slug": "blog-app-fso",
