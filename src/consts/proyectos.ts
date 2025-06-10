@@ -16,7 +16,7 @@ export const proyectos: Proyecto[] = [
         "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar"],
         "Pd": ""
       },
-      "thumb": "thumb-cositosdelana.webp",
+      "thumb": "thumbnails/thumb-cositosdelana.webp",
       "imagen": "",
       "stack": ["Aastro","Tailwind","Github"],
       "disable": false
@@ -37,7 +37,7 @@ export const proyectos: Proyecto[] = [
         "Pd": "Este proyecto es desarrollado por Midudev, y su código oficial está disponible en su repositorio de GitHub. Actualmente, se encuentra en desarrollo, lo que permite a la comunidad aportar mejoras e ideas. Además, las tecnologías definitivas aún no han sido completamente establecidas.",
         "Pr": "https://github.com/midudev/la-velada-web-oficial/pulls?q=is%3Apr+author%3AOutziderDev+",
       },
-      "thumb": "thumb-la-velada.webp",
+      "thumb": "thumbnails/thumb-la-velada.webp",
       "imagen": "",
       "stack": ["Aastro","Tailwind","Github"],
       "disable": false
@@ -57,7 +57,7 @@ export const proyectos: Proyecto[] = [
         "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar","Gestión de Contenido en Tiempo Real","Galería de Imágenes en Estilo Collage","Integración con API","Almacenamiento Externo de Imágenes"],
         "Pd": "Este proyecto es privado y cuenta con una licencia de no uso. Sin embargo, fue cancelado a último momento. A pesar de ello, decidí alojarlo de manera gratuita con fines de aprendizaje y visibilidad. Debido a las condiciones del servidor, si desean ver la demo, es posible que deban esperar aproximadamente un minuto para que se active."
       },
-      "thumb": "thumb-c.g.p.webp",
+      "thumb": "thumbnails/thumb-c.g.p.webp",
       "imagen": "/images/wallcgp-project.webp",
       "stack": ["Cloudinary","Strapi","Aastro","Tailwind","Github"],
       "disable": false
@@ -87,7 +87,7 @@ export const proyectos: Proyecto[] = [
       "slug": "blog-app-fso",
       "type": "Full Stack",
       "estado": true,
-      "categoria": ["Diseño UX/UI", "Desarrollo"],
+      "categoria": ["Desarrollo"],
       "fecha": 2024,
       "demoUrl": "https://portafolio-dev-bay.vercel.app/",
       "gitUrl": "https://github.com/OutziderDev/FullStack/tree/main/Part5/BlogListFrontend",
@@ -106,7 +106,7 @@ export const proyectos: Proyecto[] = [
         ],
         "Pd": "",
       },
-      "thumb": "thumb-blogApp.webp",
+      "thumb": "thumbnails/thumb-blogApp.webp",
       "imagen": "",
       "stack": ["JavaScript","ReactJs","Github","Tailwind","Express"],
       "disable": true
@@ -132,7 +132,7 @@ export const proyectos: Proyecto[] = [
         ],
         "Pd": "",
       },
-      "thumb": "thumb-weaterApp.webp",
+      "thumb": "thumbnails/thumb-weaterApp.webp",
       "imagen": "/videos/whaterApp.mp4",
       "stack": ["ReactJs","JavaScript","Github","Tailwind","TanStack"],
       "disable": false
