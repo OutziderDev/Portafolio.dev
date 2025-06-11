@@ -14,9 +14,6 @@ importers:
       '@astrojs/tailwind':
         specifier: ^6.0.2
         version: 6.0.2(astro@5.9.2(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.42.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@4.1.8)
-      '@fontsource/luckiest-guy':
-        specifier: ^5.2.5
-        version: 5.2.6
       astro:
         specifier: ^5.9.1
         version: 5.9.2(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.42.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -242,9 +239,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource/luckiest-guy@5.2.6':
-    resolution: {integrity: sha512-zjd1MUJWxPG+EbAYbpCKBLzqIod/YZn59kIKMezh6Bv1/mCDBYHFNnOsoUgHNRDtF+4JAUTgweibkb5Bwu8ooQ==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1948,8 +1942,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.5':
     optional: true
-
-  '@fontsource/luckiest-guy@5.2.6': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

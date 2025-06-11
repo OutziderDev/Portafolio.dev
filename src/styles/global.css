@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  /* Configuración de fuente personalizada */
-  --font-luckiest: "Luckiest Guy", sans-serif;
 
   /* Colores extendidos */
   --color-primary: #111111;
