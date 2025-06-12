@@ -2,39 +2,42 @@
 import SocialPills from '../components/SocialPills.astro'
 import ShiniText from "../components/ShiniText.astro"
 ---
-<article class="animate-fadeIn mt-16 flex flex-col -mb-8">
-  <p class="ml-0 md:ml-32 mt-16 mb-5 text-center md:text-start text-xl md:text-4xl font-Luckiest font-bold 
-            bg-gradient-to-b from-secundary/90 to-rose-200 text-transparent bg-clip-text"
-  >
-    ¡Hola! Soy..
-  </p>
-  <ShiniText text="Luis Barrios" />
 
-  <h2 class="text-center text-white text-3xl md:text-5xl font-bold opacity-80">Desarrollador de Software</h2>
+<section id="hero" class=`container mx-auto p-4 text-white max-w-5xl animate-fadeIn`> 
+  <div class="mt-16 flex flex-col">
+    
+    <div class="  px-3 py-2 gap-2 border rounded-full border-gray-400/30 inline-flex items-center justify-center self-center">
+      <span class="relative flex">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+        <span class="relative inline-flex size-3 rounded-full bg-green-500"></span>
+      </span>
+      Disponible para colaborar
+    </div>
 
-  <div class="m-3 px-3 py-2 gap-2 border rounded-full border-gray-400/30 inline-flex items-center justify-center self-center">
-    <span class="relative flex">
-      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-      <span class="relative inline-flex size-3 rounded-full bg-green-500"></span>
-    </span>
-    Disponible para colaborar
+    <p class="ml-0 mt-10 text-center text-xl md:text-7xl  font-bold ">
+      ¡Hola yo soy
+    </p>
+    <ShiniText text="Luis Barrios!" />
+
+    <h2 class="text-center text-white text-3xl md:text-5xl font-bold opacity-80">Desarrollador de Software</h2>
+
+
+    <p class="text-white/80 tracking-wide text-xl mt-14">
+      Cuento con 
+      <span class="bg-gradient-to-b from-rose-400 from-60% to-rose-300 text-transparent bg-clip-text">
+        más de un año de experiencia
+      </span> 
+      en el desarrollo de sistemas y páginas web.  
+    </p>
+    <p class="text-white/80 tracking-wide text-xl mb-5">
+      Gracias a mi formación académica y la creación de diversos proyectos, he adquirido conocimientos fundamentales en una variedad de 
+      <span class="bg-gradient-to-b from-rose-400 from-60% to-rose-300 text-transparent bg-clip-text">
+        tecnologías de Front-end, Back-end y bases de datos.
+      </span>  
+      <!-- Aplico estos conocimientos siguiendo las mejores prácticas de programación para desarrollar soluciones personalizadas, innovadoras y escalables.  --> 
+    </p>
+
+    <SocialPills/>
+
   </div>
-
-  <p class="text-white/80 tracking-wide text-xl mt-14">
-    Cuento con 
-    <span class="bg-gradient-to-b from-rose-400 from-60% to-rose-300 text-transparent bg-clip-text">
-      más de un año de experiencia
-    </span> 
-    en el desarrollo de sistemas y páginas web.  
-  </p>
-  <p class="text-white/80 tracking-wide text-xl mb-5">
-    Gracias a mi formación académica y la creación de diversos proyectos, he adquirido conocimientos fundamentales en una variedad de 
-    <span class="bg-gradient-to-b from-rose-400 from-60% to-rose-300 text-transparent bg-clip-text">
-      tecnologías de Front-end, Back-end y bases de datos.
-    </span>  
-    <!-- Aplico estos conocimientos siguiendo las mejores prácticas de programación para desarrollar soluciones personalizadas, innovadoras y escalables.  --> 
-  </p>
-
-  <SocialPills/>
-
-</article>
+</section>
