@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  
+  --font-Montserrat: 'Montserrat', sans-serif;
+  --font-Mukta: "Mukta", cursive;
 
   /* Colores extendidos */
   --color-primary: #111111;
@@ -9,8 +12,6 @@
   /* Animaciones personalizadas */
   --animate-fadeIn: fadeIn 0.5s ease-in;
   --animate-fadeOut: fadeOut 0.5s ease-out;
-
-  /* Keyframes definidos dentro de theme */
   
   @keyframes fadeIn {
     0% { opacity: 0; }
@@ -33,4 +34,20 @@
     border-radius: 10px;
   }
   &::-webkit-scrollbar-thumb:hover { background: red; }
+}
+
+@font-face{
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Mukta';
+  src: '/fonts/Mukta.woff2' format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
