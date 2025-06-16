@@ -7,39 +7,45 @@ import ShiniText from "../components/ShiniText.astro"
   
   <div class="mx-auto max-w-[1260px] px-2 pt-30 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div class="w-full flex flex-col pb-40 md:pb-0 z-40 col-span-2">
-      <div class="text-white px-3 py-1.5 border rounded-full border-gray-400/70 inline-flex items-center justify-center gap-2 self-center">
+
+      <div class="mt-10">
+        <h1 class="text-center text-5xl md:text-6xl font-bold text-white/95 font-Montserrat whitespace-nowrap"> ¡Hola, yo soy </h1>
+        <ShiniText text="Luis Barrios!" />
+      </div>
+
+      <div class="text-white px-3 py-1.5 mt-5 border rounded-full border-gray-400/70 inline-flex items-center justify-center gap-2 self-center">
         <span class="relative flex">
           <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400/75 "></span>
           <span class="relative inline-flex size-3 rounded-full bg-green-500"></span>
         </span>
         Disponible para trabajar
       </div>
-
-      <div class="mt-8">
-        <h1 class="text-center text-6xl font-bold text-white/95 font-Montserrat"> ¡Hola, yo soy </h1>
-        <ShiniText text="Luis Barrios!" />
-      </div>
       <!--  <h2 class="text-center text-white text-3xl md:text-5xl font-bold opacity-80">Desarrollador de Software</h2> -->
-      <div class="text-center">
+      <div class="text-center md:text-start ">
         <p class="text-white/70 tracking-wide text-xl mt-10 text-pretty">
           <span class="text-white font-bold">
-            Desarrollador de Software
+            Desarrollador de Software con más de un año de experiencia
           </span>
-          con más de un año de experiencia en el desarrollo de sistemas y páginas web.
+          en el creación de sistemas y páginas web.
         </p>
-        <p class="text-white/70 tracking-wide text-xl mb-5 text-pretty">
+        <p class="text-white/70 tracking-wide text-xl text-pretty">
+          He trabajado en proyectos y colaboraciones que me han permitido adquirir 
+          <span class="text-white font-bold">conocimientos sólidos en tecnologías de frontend, backend y bases de datos.</span>
+        </p>
+        <!-- <p class="text-white/70 tracking-wide text-xl mb-5 text-pretty">
           Gracias a la creación de diversos proyectos y colaboraciones, he adquirido conocimientos fundamentales en una variedad de
           <span class="text-white/80 font-bold">
             tecnologías de Front-end, Back-end y bases de datos.
           </span>
-          <!-- Aplico estos conocimientos siguiendo las mejores prácticas de programación para desarrollar soluciones personalizadas, innovadoras y escalables.  -->
-        </p>
+        </p> -->
+        <!-- opcion -->
+        <!-- Aplico estos conocimientos siguiendo las mejores prácticas de programación para desarrollar soluciones personalizadas, innovadoras y escalables.  -->
       </div>
       <SocialPills/>
       
     </div>
     
-    <div class="h-full w-full z-30 perspective-distant col-span-1 animation-moving">
+    <div class="h-full w-full z-30 perspective-distant col-span-1 relative animation-moving">
       <div class="w-full h-full relative transition-transform duration-700 transform-3d animation-roting">
 
         <!-- Frente: imagen con efecto moderno -->
@@ -81,37 +87,44 @@ import ShiniText from "../components/ShiniText.astro"
     animation: moving 20s infinite ease-in-out;
   }
   .animation-roting {
-    animation: roting 45s infinite ;
+    animation: roting 15s infinite  ease-in-out;
   }
 
   @keyframes moving {
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg);
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    15% {
+      transform: translate(-5px, -8px) rotate(0deg);
+    }
+    30% {
+      transform: translate(4px, -3px) rotate(5deg);
+    }
+    45% {
+      transform: translate(-3px, 5px) rotate(0deg);
+    }
+    60% {
+      transform: translate(5px, 3px) rotate(-5deg);
+    }
+    75% {
+      transform: translate(-2px, -4px) rotate(0deg);
+    }
   }
-  15% {
-    transform: translate(-5px, -8px) rotate(0deg);
-  }
-  30% {
-    transform: translate(4px, -3px) rotate(5deg);
-  }
-  45% {
-    transform: translate(-3px, 5px) rotate(0deg);
-  }
-  60% {
-    transform: translate(5px, 3px) rotate(-5deg);
-  }
-  75% {
-    transform: translate(-2px, -4px) rotate(0deg);
-  }
-}
 
-  @keyframes roting {
-  0%, 20%,100% {
-    transform: rotateY(0deg);
+  /* @keyframes roting {
+    0%,100% {
+      transform: rotateY(0deg);
+    }
+    79%, 80% {
+      transform: rotateY(180deg);
+    }
+  } */
+   @keyframes roting {
+    0%,65%,100% {
+      transform: rotateY(0deg);
+    }
+    70%,80% {
+      transform: rotateY(180deg);
+    }
   }
-  60%, 80% {
-    transform: rotateY(180deg);
-  }
-   
-}
 </style>
