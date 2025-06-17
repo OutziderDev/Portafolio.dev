@@ -1,27 +1,39 @@
 ---
 ---
-<h2 class="text-white font-bold text-4xl lg:text-6xl my-12">
+<h2 class="text-white font-bold text-4xl font-Montserrat lg:text-6xl my-12">
   <slot/>
 </h2>
 
 <style>
   h2 {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      align-items: center;
-      white-space: nowrap;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    /* white-space: nowrap; */
 
-      @media (width >= 768px) {
-        justify-content: start;
+    @media (width >= 768px) {
+      justify-content: start;
 
-        &::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 1px;
-          background-color: #fff
-        }
+      &::after {
+        content: '';
+        display: block;
+        flex-grow: 1;
+        height: 1px;
+        margin-top: 4px;
+        background:linear-gradient(30deg , #22bdf5, #cf9715, #22bdf5, #fff,#22bdf5);
+        background-size: 300% 100%;
+        animation: moveGradient 3s linear alternate infinite;
       }
     }
+  }
+
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 </style>

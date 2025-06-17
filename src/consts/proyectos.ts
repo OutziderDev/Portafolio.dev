@@ -1,5 +1,8 @@
 import type { Proyecto } from "../types/Proyecto"
-
+/* Estado:
+ true - terminado
+ false- en curso
+*/
 export const proyectos: Proyecto[] = [
     {
       "titulo": "Cositos De Lana",
