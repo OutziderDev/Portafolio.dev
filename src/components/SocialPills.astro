@@ -6,7 +6,7 @@ import Gmail from "../assets/Gmail.astro"
 import PillItem from "./PillItem.astro"
 
 ---
-<div class="flex flex-col gap-y-2 md:flex-row items-center justify-center mt-7 gap-x-3 text-white   font-Montserrat">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center mt-7  text-white  font-Montserrat">
   <PillItem href="https://github.com/OutziderDev/">
     <GithubIcon class="size-6 fill-white group-hover:fill-black" />
     GitHub
@@ -15,7 +15,7 @@ import PillItem from "./PillItem.astro"
     <LinkedInIcon class="size-6 fill-cyan-500 group-hover:fill-cyan-500" />
     LinkedIn
   </PillItem>
-  <PillItem href="/LuisBarriosCV.pdf">
+  <PillItem href="/files/LuisBarriosCV.pdf">
     <CvFileIcon class="size-6  group-hover:fill-teal-500" />
     Currículum
   </PillItem> 
@@ -23,42 +23,51 @@ import PillItem from "./PillItem.astro"
     type="button" 
     id="copyButton" 
     class="p-2 border border-gray-400/50 rounded-lg 
-      flex gap-x-2 group
+      flex gap-x-2 group cursor-pointer
       hover:bg-white hover:text-black hover:scale-110 
       transition-all duration-300">
     <Gmail class="size-6"/>
     Gmail
   </button>
+</div>
 
+<div id="tooltip" class="hidden  animate-sliceFadeIn  absolute bottom-20 right-5 bg-gray-800 text-white/50 border-l-8 border-green-500 max-w-sm p-4 rounded-md gap-4 items-center justify-center ">
+  <div class="bg-green-700 p-1 rounded-md ">
+    <svg  xmlns="http://www.w3.org/2000/svg" class="stroke-green-200"  width="24"  height="24"   viewBox="0 0 24 24"  fill="none"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
+  </div>
+  <p>Enlace copiado en el portapapeles. ¡Puedes Pegarlo! Win: Ctrl + V</p>
 </div>
-<div id="tooltip" class="invisible animate-bounce mt-4 text-green-500 border border-green-500 self-center p-2 rounded-xl transition-all">
-  <p>¡Correo Copiado! Utiliza Ctrl + v</p>
-</div>
+
+<style>
+  .animate-sliceFadeIn{
+    animation: sliderFade 0.3s ease-in;
+  }
+  @keyframes sliderFade {
+    0%{
+      transform: translateY(200px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+</style>
 
 <script>
-  const email = "luisbarrios0110@gmail.com"
-  const copyButton = document.getElementById("copyButton")!
-  const tooltip = document.getElementById("tooltip")!
+  document.addEventListener("DOMContentLoaded", ()=>{
+    const email: string = "luisbarrios0110@gmail.com"
+    const copyButton : HTMLElement = document.getElementById("copyButton")!
+    const tooltip: HTMLElement = document.getElementById("tooltip")!
 
-  const toggleTooltip = () => {
-    if (tooltip.classList.contains("invisible")) {
-      tooltip.classList.remove("invisible");
-      tooltip.classList.add("visible");
+    copyButton.addEventListener('click', ()=>{
+      tooltip.classList.add('flex')
+      tooltip.classList.remove('hidden')
+      /* pego texto cuando es visible */
+      navigator.clipboard.writeText(email)
 
       setTimeout(() => {
-        tooltip.classList.remove("visible");
-        tooltip.classList.add("invisible");
-      }, 1500);
-      
-    }
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(email)
-  };
-
-  copyButton.addEventListener("click", () => {
-    copyToClipboard(); // Copiar al portapapeles
-    toggleTooltip(); // Mostrar el tooltip
-  });
+        tooltip.classList.add('hidden')
+      }, 2100);
+    })
+  })
 </script>
+
