@@ -46,8 +46,8 @@
 
 @font-face{
   font-family: 'Mukta';
-  src: '/fonts/Mukta.woff2' format('woff2');
+  src: url('/fonts/Mukta.woff2') format('woff2');
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-display: swap;
 }
