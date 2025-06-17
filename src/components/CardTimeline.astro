@@ -3,12 +3,12 @@ const { titulo,subtitulo,fecha,pos ,descrip} = Astro.props;
 ---
 <div class={`w-full slide-in-top flex items-center ${pos}`}>
   <div class={`p-6 overflow-hidden bg-black border w-4/5 md:w-2/5 border-gray-400/30 relative rounded-2xl card-spotlight `} data-spotlight>
-    <h3 class="text-lg font-bold font-serif text-white">{titulo}</h3>
-    <p class="text-sm text-white/70 font-semibold">{subtitulo}</p>
-    <p class="text-sm text-white font-bold">{fecha}</p>
-    <p class="mt-2 text-white/70">{descrip}</p>
+    <h3 class="text-lg font-bold text-white font-Montserrat">{titulo}</h3>
+    <p class="text-sm  font-bold font-Mukta text-sky-300/80">{subtitulo}</p>
+    <p class="text-sm text-white font-bold font-Mukta">{fecha}</p>
+    <p class="mt-2 text-white/70 font-Mukta">{descrip}</p>
   </div>
-  <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-7 bg-red-500 rounded-full border-4 border-primary"></div>
+  <div class="absolute left-8 md:left-1/2 md:-translate-x-1/2 size-7 bg-sky-500 rounded-full border-4 border-primary"></div>
 </div>
 
 <script is:inline>

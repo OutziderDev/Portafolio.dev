@@ -3,16 +3,16 @@
   import SectionTitle from '../components/SectionTitle.astro'
   import { estudios } from '../consts/estudios'
 ---
-<section id="experiencia" class=`max-w-5xl mx-auto mt-20 p-3 text-white`>
+<section id="experiencia" class=`max-w-4xl mx-auto mt-20 p-3 text-white`>
   <SectionTitle >
-    <span class="order-1 flex items-center gap-4"> 
+    <span class="order-1 font-Montserrat"> 
       Formación Académica 
     </span>
   </SectionTitle>
   
   <div class="relative" id="timeline">
 
-    <div class="absolute top-0 md:left-1/2 transform-cpu md:-translate-x-1/2 w-3 rounded-md timeline-line"></div>
+    <div class="absolute top-0 md:left-1/2 transform-cpu md:-translate-x-1/2 w-3 rounded-md timeline-line bg-gradient-to-b from-sky-900/80 to-sky-400/80"></div>
 
     <div class="flex flex-col  gap-y-2">
       {
@@ -26,7 +26,7 @@
 
 <style>
   .timeline-line {
-      background: linear-gradient(to bottom, rgb(133, 0, 0), #ff0000);
+      /* background: linear-gradient(to bottom, rgb(133, 0, 0), #ff0000); */
       transition: height 0.5s ease-in-out;
   }
 </style>
