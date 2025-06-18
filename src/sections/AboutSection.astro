@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import SkillWall from '../components/SkillWall.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import ItemSeparated from '../components/ItemSeparated.astro';
@@ -15,30 +14,30 @@ import ItemSeparated from '../components/ItemSeparated.astro';
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-pretty ">
 
-      <div class="col-span-2 md:col-span-1 order-1 font-Mukta flex flex-col gap-3">
-        <p class="text-white/70">
+      <div class="col-span-2 md:col-span-1 order-1 font-Mukta flex flex-col gap-4 text-white/70">
+        <p >
           Soy un<span class="font-bold text-white"> desarrollador de software de Panamá, con un año de experiencia</span> en el desarrollo de sistemas y aplicaciones web.
         </p>
-        <p class="text-white/70 ">
+        <p >
           Me apasiona el desarrollo de software y la tecnología; siempre busco mejorar mis habilidades explorando nuevas herramientas y creando soluciones innovadoras.
         </p>
-        <p class="text-white/70">
+        <p >
           Aunque me especializo en el desarrollo de sitios web modernos, también he trabajado en proyectos con tecnologías backend.
         </p>
-        <p class="text-white/70  tracking-wider">
+        <p  >
           Estoy siempre dispuesto a capacitarme, aprender y aplicar mis conocimientos en proyectos colaborativos o freelance,
           <span class="text-white font-semibold">desarrollando soluciones eficientes, escalables y alineadas con buenas prácticas de programación.</span>
         </p>
-        <!-- <p class="text-white/80 tracking-wide mt-6">
-          En mi tiempo libre disfruto resolviendo puzzles, explorando la naturaleza a través del senderismo y sumergiéndome en la lectura.
-        </p> -->
+        <p >
+          En mi tiempo libre disfruto resolviendo puzzles, explorando la naturaleza a través del senderismo y programar.
+        </p>
       </div>
 
-      <div class="flex flex-col items-center order-2">
-        <h3 class="font-bold font-Montserrat mb-5 text-xl">Algunas Estadisticas de GitHub</h3>
+      <div class="flex flex-col items-center justify-center order-2">
+        <h3 class="font-bold font-Montserrat mb-5 text-center text-xl">¡Algunas estadísticas de GitHub!</h3>
         <a href="https://github.com/OutziderDev/"  class="flex flex-col">
           <img src="https://streak-stats.demolab.com?user=OutziderDev&theme=codestackr&hide_border=true&locale=es"
-            class="w-full h-full hover:scale-103 transition"
+            class="w-full h-40 object-cover hover:scale-103 transition"
             alt="GitHub Streak" 
             loading="lazy"
             decoding="async"
@@ -51,18 +50,10 @@ import ItemSeparated from '../components/ItemSeparated.astro';
           />
         </a>
         <!--<img src="https://github-readme-stats.vercel.app/api?username=OutziderDev&show_icons=true&theme=blue-green" loading="lazy" decoding="async" alt="GitHub Stats">-->
-
-        <!-- <Image
-          height={1}
-          width={1}
-          src=`/files/perfil.webp`
-          class="rounded-md object-cover aspect-video size-80 grayscale hover:grayscale-0 hover:scale-110  hover:rotate-3 transition-all duration-200"
-          alt="Luis Barrios"
-        > -->
       </div>
       
       <div class="col-span-2 order-3">
-        <h3 class="font-bold my-10 text-2xl">Herramientas y tecnologías que manejo:</h3>
+        <h3 class="font-bold my-10 text-2xl font-Montserrat">Tecnologías y Herramientas</h3>
         <SkillWall  />
       </div>
     </div>

@@ -8,57 +8,33 @@ const items = Object.values(components).map(module =>( module as {default:any}).
 
 <article  class="flex flex-col gap-y-8 gap-x-3" >
     <div class="marquee relative flex overflow-hidden justify-start w-full select-none" id="marquee">
-    <div class="marquee__group  flex items-center justify-around gap-x-4">
-      {items.map((Item,index) => (
-          <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-16"/>
-            <span class="opacity-0 group-hover:opacity-100 transition-all">
-              {componentNames[index]}
-            </span>
-          </button>
-        ))
-      }
-    </div>
-    <div class="marquee__group flex items-center justify-around gap-x-4">
-      {items.map((Item,index) => (
-        <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-16"/>
-            <span class="opacity-0 group-hover:opacity-100 transition-all">
-              {componentNames[index]}
-            </span>
-          </button>
-        ))}
-    </div>  
+      <div class="marquee__group  flex items-center justify-around gap-x-4">
+        {items.map((Item,index) => (
+          <div class="size-30 border border-white/20 p-2 rounded-md bg-gradient-to-br from-black to-sky-950/50 flex flex-col items-center justify-center gap-2">
+            <Item key={index} class="size-20 object-cover fill-white  stroke-white/50"/>
+            <span class="font-bold font-Mukta">
+                {componentNames[index]}
+              </span>
+          </div>
+          ))
+        }
+      </div>
+      <div class="marquee__group flex items-center justify-around gap-x-4">
+        {items.map((Item,index) => (
+          <div class="size-30 border border-white/20 p-2 rounded-md bg-gradient-to-b from-black to-sky-950/50 flex flex-col items-center justify-center gap-2">
+            <Item key={index} class="size-20 object-cover fill-white  stroke-white/50"/>
+            <span class="font-bold font-Mukta">
+                {componentNames[index]}
+              </span>
+          </div>
+          ))}
+      </div>  
   </div>
 
-   <div class="marquee marquee--reverse relative flex overflow-hidden justify-start w-full select-none" id="marquee-reverse">
-    <div class="marquee__group shrink-0 flex items-center justify-around gap-x-4">
-      {items.map((Item,index) => (
-          <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-16"/>
-            <span class="opacity-0 group-hover:opacity-100 transition-all">
-              {componentNames[index]}
-            </span>
-          </button>))
-      }
-    </div>
-    <div class="marquee__group shrink-0 flex items-center justify-around gap-x-4" >
-      {items.map((Item,index) => (
-        <button class="hover:-rotate-6 hover:scale-105 transition group">  
-            <Item key={index} class="fill-white size-16"/>
-            <span class="opacity-0 group-hover:opacity-100 transition-all">
-              {componentNames[index]}
-            </span>
-          </button>
-        ))
-      }
-    </div>
-  </div> 
 </article>
 
 <script>
   const marquee = document.getElementById("marquee")!;
-  const marqueeReverse = document.getElementById("marquee-reverse")!;
   
   let isPaused = false;
   const pauseOnHover = "true";
@@ -67,14 +43,12 @@ const items = Object.values(components).map(module =>( module as {default:any}).
     if (pauseOnHover) {
       isPaused = pause;
       marquee.classList.toggle("paused", isPaused);
-      marqueeReverse.classList.toggle("paused", isPaused);
     }
   }
 
   marquee.addEventListener("mouseenter", () => togglePause(true));
   marquee.addEventListener("mouseleave", () => togglePause(false));
-  marqueeReverse.addEventListener("mouseenter", () => togglePause(true));
-  marqueeReverse.addEventListener("mouseleave", () => togglePause(false));
+  
 </script>
 
 <style>
@@ -90,11 +64,6 @@ const items = Object.values(components).map(module =>( module as {default:any}).
 
   .marquee__group {
     animation: scroll-x var(--duration) linear infinite;
-  }
-
-  .marquee--reverse .marquee__group {
-    animation-direction: reverse;
-    animation-delay: -5s;
   }
 
   @keyframes scroll-x {
