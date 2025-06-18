@@ -1,33 +1,38 @@
 ---
 
 ---
-<article>
-  <h2 class="text-white text-center font-Luckiest text-4xl my-12"> Contactame para colaborar juntos!</h2>
+<section id="contacto" class="mt-20 max-w-4xl mx-auto p-3 text-white">
+  <h2 class="font-Montserrat font-bold  text-center  text-4xl my-12">¡Contactame para colaborar juntos!</h2>
   
-  <form id="contact-form" class="max-w-lg mx-auto border p-8 border-gray-500/50 rounded-lg  hover:shadow-xl hover:shadow-white/50 delay-150 transition-all">
-    <div class="mb-5">
-      <label for="nombre" class="block mb-2 text-sm font-medium text-white">Tu nombre:</label>
-      <input type="text" name="nombre" id="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-offset-2 focus:outline-green-500" placeholder="Toribio Segundo Villalobos" required />
-    </div>
-    <div class="mb-5">
-      <label for="email" class="block mb-2 text-sm font-mediumtext-white">Tu correo Electronico:</label>
-      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-offset-2 focus:outline-green-500" required placeholder="Toribio@Miau.com"/>
-    </div>
-    <div class="mb-5">
-      <label for="message" class="block mb-2 text-sm font-medium text-white">Mensaje:</label>
-      <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:outline-offset-2 focus:outline-green-500" placeholder="Hola luis, me gustaria colaborar con usted para un proyecto de..."></textarea>    
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+    <form id="contact-form" class="col-span-3 font-Mukta border p-8 border-white/20 rounded-lg  hover:shadow-xl hover:shadow-white/50 delay-150 transition-all">
+      <div class="mb-5">
+        <label for="nombre" class="block mb-2 text-sm font-medium text-white">Tu nombre:</label>
+        <input type="text" name="nombre" id="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-offset-2 focus:outline-green-500" placeholder="Toribio Segundo Villalobos" required />
+      </div>
+      <div class="mb-5">
+        <label for="email" class="block mb-2 text-sm font-mediumtext-white">Tu correo Electronico:</label>
+        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-offset-2 focus:outline-green-500" required placeholder="Toribio@Miau.com"/>
+      </div>
+      <div class="mb-5">
+        <label for="message" class="block mb-2 text-sm font-medium text-white">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:outline-offset-2 focus:outline-green-500" placeholder="Hola luis, me gustaria colaborar con usted para un proyecto de..."></textarea>
+      </div>
     
-    <button type="submit" id="btnsubmit" class="text-white mx-auto py-2 px-4 rounded-md flex items-center justify-center gap-2 bg-green-700 hover:bg-green-500 hover:scale-105 transition-all">
-      <svg id="svgSend" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
-      </svg>
-      <svg id="svgBar" class="animate-spin hidden"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rotate-clockwise-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5" /><path d="M5.63 7.16l0 .01" /><path d="M4.06 11l0 .01" /><path d="M4.63 15.1l0 .01" /><path d="M7.16 18.37l0 .01" /><path d="M11 19.94l0 .01" /></svg>
-      Enviar
-    </button>
-  </form>
+      <button type="submit" id="btnsubmit" class="text-white mx-auto py-2 px-4 rounded-md flex items-center justify-center gap-2 bg-green-700 hover:bg-green-500 hover:scale-105 transition-all">
+        <svg id="svgSend" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+        </svg>
+        <svg id="svgBar" class="animate-spin hidden"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-rotate-clockwise-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5" /><path d="M5.63 7.16l0 .01" /><path d="M4.06 11l0 .01" /><path d="M4.63 15.1l0 .01" /><path d="M7.16 18.37l0 .01" /><path d="M11 19.94l0 .01" /></svg>
+        Enviar
+      </button>
+    </form>
+    <div class="col-span-2 font-Mukta border p-8 border-white/20 rounded-lg ">
+      Conversemos
+    </div>
+  </div>
 
-</article>
+</section>
 
 <script>
   const btnSubmit = document.getElementById("btnsubmit")
