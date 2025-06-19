@@ -1,6 +1,7 @@
 ---
 import SocialPills from '../components/SocialPills.astro'
 import ShiniText from "../components/ShiniText.astro"
+import GitHubIcon from "../assets/icons/Github.svg"
 ---
 <section id="hero" class=`animate-fadeIn`>
   <div class="absolute top-0 -z-10 h-screen w-full bg-primary bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
@@ -49,7 +50,7 @@ import ShiniText from "../components/ShiniText.astro"
       <div class="w-full h-full relative transition-transform duration-700 transform-3d animation-roting">
 
         <!-- Frente: imagen con efecto moderno -->
-        <div class="absolute w-full h-full backface-hidden">
+        <div class="absolute w-full h-full backface-hidden group">
           <a href="https://github.com/OutziderDev/" target="_blank" rel="noopener noreferrer" class="relative w-full h-full block">
              
             <img src="/files/perroProgramador.webp"
@@ -57,8 +58,10 @@ import ShiniText from "../components/ShiniText.astro"
                 alt="Perfil de GitHub Blur"/>
              
             <img src="/files/perroProgramador.webp"
-                class="relative z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full  "
+                class="relative z-30 top-1/2 left-1/2 group-hover:opacity-0 -translate-x-1/2 -translate-y-1/2 rounded-full  "
                 alt="Perfil de GitHub"/>
+
+            <GitHubIcon class="fill-white bg-black rounded-full size-72 opacity-0 group-hover:opacity-100 transition-all absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40"/>
           </a>
         </div>
 

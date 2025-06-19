@@ -56,11 +56,20 @@ const filteredIcons = Object.entries(icons)
 
     </div>
 
-    <div class="relative">
+    <div class="relative w-full">
+      <!-- <div class="absolute bottom-0 left-1/2 -translate-x-1/2 z-40 flex gap-2 w-full justify-center font-Mukta">
+        {
+          estado ? '' : <div class="px-4 py-1 my-3 text-sm bg-yellow-400  rounded-3xl text-black font-bold">En Curso</div>
+        }
+        {categoria.map((cat : String) =>  
+          <div class="px-4 py-1 my-3 flex items-center text-sm justify-center text-pretty bg-black rounded-3xl text-white shadow-sm shadow-white  font-semibold">{cat === "Desarrollo" ? `💻 Desarrollo` : `🖌️ Diseño UX/UI`}</div>
+          )
+        }      
+      </div> -->
       <Image
         width={1200}
         height={900}
-        class="mt-8 -mb-4 rounded-t-2xl object-cover  lg:max-w-lg lg:absolute  lg:h-full  lg:hover:scale-102 delay-200 transition"
+        class="mt-8 -mb-4 rounded-t-2xl object-cover z-30  lg:max-w-lg lg:absolute  lg:h-full  lg:hover:scale-102 delay-200 transition"
         src=`/${thumb}`
         alt="Preview del proyecto"
       />
