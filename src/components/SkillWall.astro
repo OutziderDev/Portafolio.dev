@@ -5,15 +5,14 @@ const componentNames = Object.keys(components).map(path =>
 );
 const items = Object.values(components).map(module =>( module as {default:any}).default)
 ---
-
-<article  class="flex flex-col gap-y-8 gap-x-3" >
-    <div class="marquee relative flex overflow-hidden justify-start w-full select-none" id="marquee">
+<article  class="">
+    <div class="marquee relative flex gap-4 overflow-hidden justify-start w-full select-none" id="marquee">
       <div class="marquee__group  flex items-center justify-around gap-x-4">
         {items.map((Item,index) => (
           <div class="size-30 border border-white/20 p-2 rounded-md bg-gradient-to-br from-black to-sky-950/50 flex flex-col items-center justify-center gap-2">
             <Item key={index} class="size-20 object-cover fill-white  stroke-white/50"/>
             <span class="font-bold font-Mukta">
-                {componentNames[index]}
+                {componentNames[index] === 'Aastro' ? 'Astro' : componentNames[index]}
               </span>
           </div>
           ))
@@ -24,13 +23,12 @@ const items = Object.values(components).map(module =>( module as {default:any}).
           <div class="size-30 border border-white/20 p-2 rounded-md bg-gradient-to-b from-black to-sky-950/50 flex flex-col items-center justify-center gap-2">
             <Item key={index} class="size-20 object-cover fill-white  stroke-white/50"/>
             <span class="font-bold font-Mukta">
-                {componentNames[index]}
+                {componentNames[index] === 'Aastro' ? 'Astro' : componentNames[index]}
               </span>
           </div>
           ))}
       </div>  
   </div>
-
 </article>
 
 <script>

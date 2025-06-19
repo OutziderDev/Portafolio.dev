@@ -1,7 +1,11 @@
 ---
 import { Image } from 'astro:assets';
+import Github from "../assets/icons/Github.svg";
+import InfoIcon from "../assets/info.svg"
+import WorldIcon from "../assets/world.svg"
+
 const icons = import.meta.glob("../assets/icons/*.svg", {eager: true})
-const {titulo,descripcionCard,thumb,stack,estado,type,fecha,slug,categoria} = Astro.props 
+const {titulo,descripcionCard,thumb,stack,estado,type,fecha,slug,categoria,gitUrl,demoUrl} = Astro.props 
 
 const filteredIcons = Object.entries(icons)
 .filter(([path]) => {
@@ -10,30 +14,39 @@ const filteredIcons = Object.entries(icons)
 .map(([, mod]) => (mod as {default:any}).default)
 ---
 
-<div data-slug={slug} role="link" class='proyecto-card border border-white/30 cursor-pointer bg-primary rounded-2xl hover:scale-[1.02] overflow-hidden  relative transition-transform duration-200'>
+<div  role="link" class='proyecto-card border border-white/30  bg-primary rounded-2xl hover:scale-[1.02] overflow-hidden  relative transition-transform duration-200'>
   <div class="grid lg:grid-cols-2 lg:gap-16 bg-black p-4 rounded-2xl overflow-hidden">
     <div class="pb-4">
       <div class="text-sky-400/80  font-bold font-Mukta text-md">
         <span>{type} - {fecha}</span>
       </div>
-
       <h3 class="text-3xl font-bold md:text-4xl font-Montserrat mt-2">
         {titulo}
       </h3>
-      <div class="flex gap-2 w-full font-Mukta">
-        {
-          estado ? '' : <div class="px-4 py-1 my-3 text-sm bg-yellow-400  rounded-3xl text-black font-bold">En Curso</div>
-        }
-        {categoria.map((cat : String) =>  
-          <div class="px-4 py-1 my-3 flex items-center text-sm justify-center text-pretty bg-white rounded-3xl text-black font-semibold">{cat === "Desarrollo" ? `💻 Desarrollo` : `🖌️ Diseño UX/UI`}</div>
-          )
-        }      
+      <div class="flex gap-2 w-full font-Mukta my-1 ">
+        <a href={demoUrl} class=" px-4 py-1 my-3 flex gap-1 group items-center text-sm justify-center text-pretty bg-white rounded-full text-black font-bold hover:scale-105 transition" target="_blank" rel="noopener noreferrer">
+          <WorldIcon class="size-4 stroke-blue-500"/>
+          Demo
+        </a>
+        <a href=`/proyectos/${slug}` class="block" target="_blank" rel="noopener noreferrer">
+          <div  class=" px-4 py-1 my-3 flex gap-1 items-center  text-sm justify-center text-pretty bg-white rounded-full text-black font-bold hover:scale-105 transition">
+            <InfoIcon class="size-4 stroke-blue-500"/>
+            Info
+          </div>
+        </a>
+        <a href={gitUrl} class="block"  target="_blank" rel="noopener noreferrer">
+          <div class=" px-4 py-1 my-3 flex items-center text-sm gap-1 justify-center text-pretty bg-white rounded-full text-black font-bold hover:scale-105 transition-all">
+            <Github class="size-4"/>
+            GitHub
+          </div>
+        </a>
       </div>
-      <p class="border-t border-white/80 mt-2 py-4 font-Mukta text-wrap text-white/80">
+      
+      <p class=" font-Mukta text-wrap text-white/80 line-clamp-4">
         {descripcionCard}
       </p>
 
-      <div class="flex gap-4 border-t border-white/90 py-4 -mb-4">
+      <div class="flex gap-4 mt-4">
         {
           filteredIcons.map((Icon) => {
             return <Icon class="size-7 fill-white"/>
@@ -56,7 +69,7 @@ const filteredIcons = Object.entries(icons)
 </div>
 
 
-<script >
+<!-- <script >
   document.addEventListener("DOMContentLoaded", () => {
     const contenedores = document.querySelectorAll(".proyecto-card")
     if (contenedores) {
@@ -69,7 +82,7 @@ const filteredIcons = Object.entries(icons)
       })
     }
   })
-</script>
+</script> -->
 
 <style>
   
