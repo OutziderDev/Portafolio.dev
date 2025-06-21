@@ -93,7 +93,7 @@ import GitHubIcon from "../assets/icons/Github.svg"
     animation: roting 15s infinite  ease-in-out;
   }
 
-  @keyframes moving {
+  /* @keyframes moving {
     0%, 100% {
       transform: translate(0, 0) rotate(0deg);
     }
@@ -112,17 +112,29 @@ import GitHubIcon from "../assets/icons/Github.svg"
     75% {
       transform: translate(-2px, -4px) rotate(0deg);
     }
-  }
-
-  /* @keyframes roting {
-    0%,100% {
-      transform: rotateY(0deg);
-    }
-    79%, 80% {
-      transform: rotateY(180deg);
-    }
   } */
-   @keyframes roting {
+  @keyframes moving {
+    0%, 100% {
+      transform:  translate(0, 0) ;
+    }
+    15% {
+      transform:  translate(-12px, -12px) ;
+    }
+    30% {
+      transform: translate(12px, 12px) ;
+    }
+    45% {
+      transform: translate(0px, 0px)  ;
+    }
+    60% {
+      transform: translate(12px, -12px)  ;
+    }
+    75% {
+      transform: translate(-12px, 12px)  ;
+    }
+  }
+  
+  @keyframes roting {
     0%,65%,100% {
       transform: rotateY(0deg);
     }

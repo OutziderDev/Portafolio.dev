@@ -10,10 +10,10 @@ Bienvenido a mi portafolio digital, un espacio donde presento mis proyectos, hab
 
 ## 🛠 Tecnologías utilizadas
 
-- 🚀 [<img src="https://skillicons.dev/icons?i=astro" alt="Astro" />](https://astro.build/)
-- 🟦 [<img src="https://skillicons.dev/icons?i=typescript" alt="typescript" />](https://www.typescriptlang.org/)
-- 🟨 [<img src="https://skillicons.dev/icons?i=js" alt="javascript" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- 🎨 [Tailwind CSS](https://tailwindcss.com/)
+[<img src="https://skillicons.dev/icons?i=astro" alt="Astro" />](https://astro.build/)
+[<img src="https://skillicons.dev/icons?i=typescript" alt="typescript" />](https://www.typescriptlang.org/)
+[<img src="https://skillicons.dev/icons?i=js" alt="javascript" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[<img src="https://skillicons.dev/icons?i=tailwind" alt="tailwindcss" />](https://tailwindcss.com/)
 
 
 ## ⚠️ Licencia
