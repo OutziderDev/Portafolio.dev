@@ -50,7 +50,7 @@ import GitHubIcon from "../assets/icons/Github.svg"
       <div class="w-full h-full relative transition-transform duration-700 transform-3d animation-roting">
 
         <!-- Frente: imagen con efecto moderno -->
-        <div class="absolute w-full h-full backface-hidden group">
+        <div class="absolute w-full h-full backface-hidden group scale-110">
           <a href="https://github.com/OutziderDev/" target="_blank" rel="noopener noreferrer" class="relative w-full h-full block">
              
             <img src="/files/perroProgramador.webp"
@@ -66,7 +66,7 @@ import GitHubIcon from "../assets/icons/Github.svg"
         </div>
 
         <!-- Reverso: otra imagen -->
-        <div class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center">
+        <div class="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center scale-110">
 
           <a href="/" target="_blank" rel="noopener noreferrer" class="absolute">
             <img src="/files/perfil.webp"
@@ -92,7 +92,9 @@ import GitHubIcon from "../assets/icons/Github.svg"
   .animation-roting {
     animation: roting 15s infinite  ease-in-out;
   }
-
+  .animation-balance {
+    animation: balancear 15s infinite ease-in-out;
+  }
   /* @keyframes moving {
     0%, 100% {
       transform: translate(0, 0) rotate(0deg);
@@ -142,4 +144,24 @@ import GitHubIcon from "../assets/icons/Github.svg"
       transform: rotateY(180deg);
     }
   }
+  /* @keyframes balancear {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(0deg);
+    }
+    30% {
+      transform: rotate(10deg);
+    }
+    45% {
+      transform: rotate(0deg);
+    }
+    60% {
+      transform: rotate(-6deg);
+    }
+    75% {
+      transform: rotate(0deg);
+    }
+  } */
 </style>
