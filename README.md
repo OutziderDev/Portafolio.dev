@@ -1,6 +1,8 @@
 # 💼 Mi Portafolio
 
-![Preview](./public/og/og.jpg)
+**Visita el sitio web**: [Luis Barrios Portafolio ](https://portafolio-dev-bay.vercel.app/)
+
+![Portafolio](https://portafolio-dev-bay.vercel.app/og/OG.jpg)
 
 ## 📝 Descripción
 
@@ -8,9 +10,9 @@ Bienvenido a mi portafolio digital, un espacio donde presento mis proyectos, hab
 
 ## 🛠 Tecnologías utilizadas
 
-- 🚀 [Astro](https://astro.build/)
-- 🟦 [TypeScript](https://www.typescriptlang.org/)
-- 🟨 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- 🚀 [<img src="https://skillicons.dev/icons?i=astro" alt="Astro" />](https://astro.build/)
+- 🟦 [<img src="https://skillicons.dev/icons?i=typescript" alt="typescript" />](https://www.typescriptlang.org/)
+- 🟨 [<img src="https://skillicons.dev/icons?i=js" alt="javascript" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - 🎨 [Tailwind CSS](https://tailwindcss.com/)
 
 
