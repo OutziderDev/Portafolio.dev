@@ -15,8 +15,8 @@ export const proyectos: Proyecto[] = [
       "gitUrl": "https://github.com/OutziderDev/CositosDeLana",
       "descripcionCard": "Sitio web freelance desarrollado para dar visibilidad a un emprendimiento de tejidos artesanales, con un diseño moderno y enfoque en la experiencia del usuario.",
       "descripcionPage" : {
-        "descripcion": "",
-        "metas": ["Diseño Responsive","Interfaz Amigable y Fácil de Usar"],
+        "descripcion": "Este proyecto terminó convirtiéndose en uno de mis favoritos. Aunque inicialmente tuve ciertas dudas con la paleta de colores y algunos requisitos del cliente, a medida que avanzaba en el desarrollo, logré conectar profundamente con la propuesta visual y funcional. El tiempo limitado supuso un gran desafío, ya que debía entregar parte clave de la experiencia UX/UI bajo plazos exigentes, sin comprometer el rendimiento del sitio ni las buenas prácticas de programación. Este proyecto representó un excelente ejercicio de adaptación, diseño estratégico y enfoque técnico bajo presión.",
+        "metas": [  "Adaptación Visual según la Identidad del Cliente",  "Desarrollo UX/UI bajo Plazos Exigentes",  "Optimización del Rendimiento Web","Aplicación de Buenas Prácticas en Código",  "Diseño Responsive para Múltiples Dispositivos"],
         "Pd": ""
       },
       "thumb": "thumbnails/thumb-cositosdelana.webp",
