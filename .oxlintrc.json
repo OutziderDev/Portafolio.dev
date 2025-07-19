@@ -1,9 +1,23 @@
 {
   "rules": {
-    "eqeqeq": "warn",
-    "import/no-cycle": "error",
-    "react/self-closing-comp": ["error", { "html": false }],
-    "typescript/triple-slash-reference": "warn",
-    "jsx-a11y/role-support-aria-props": "warn"
+    
+    "no-unused-vars": "error",
+    "no-undef": "error",
+    "prefer-const": "error",
+    "no-empty": "error",
+    "no-extra-semi": "error",
+    "no-useless-return": "error",
+    "no-empty-function": "error",
+    "no-eval": "error",
+    "no-new-func": "error",
+    "no-unused-private-class-members": "error",
+
+    
+    "eqeqeq": "error",                     
+    "no-trailing-spaces": "error",           
+    "object-curly-spacing": "error",        
+    "arrow-spacing": "error",                
+    "no-console": "off"                      
   }
+  
 }
