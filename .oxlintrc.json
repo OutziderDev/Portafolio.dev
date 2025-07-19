@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "eqeqeq": "warn",
+    "import/no-cycle": "error",
+    "react/self-closing-comp": ["error", { "html": false }],
+    "typescript/triple-slash-reference": "warn",
+    "jsx-a11y/role-support-aria-props": "warn"
+  }
+}
