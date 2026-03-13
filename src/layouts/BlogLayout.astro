@@ -1,0 +1,186 @@
+---
+import '../styles/global.css'
+import Header from '../sections/Header.astro';
+import Footer from '../sections/Footer.astro';
+import Analytics from '@vercel/analytics/astro'
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Blog post" } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <Analytics />
+    <link rel="preload" href="/fonts/Montserrat.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/Mukta.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+  <body class="bg-primary min-h-screen">
+    <Header/>
+    <main class="relative">
+      <div class="absolute top-0 -z-10 h-screen w-full bg-primary bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      
+      <article class="max-w-3xl mx-auto px-4 py-12 mt-20">
+        <slot />
+      </article>
+      
+      <Footer/>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  /* Estilos para el contenido markdown */
+  .markdown-content {
+    color: #e5e5e5;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+
+  .markdown-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .markdown-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    border-bottom: 2px solid #A00;
+    padding-bottom: 0.5rem;
+  }
+
+  .markdown-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #e5e5e5;
+  }
+
+  .markdown-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  .markdown-content a {
+    color: #A00;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .markdown-content a:hover {
+    color: #ff3333;
+  }
+
+  .markdown-content ul, .markdown-content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .markdown-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .markdown-content ul li::marker {
+    color: #A00;
+  }
+
+  .markdown-content ol li::marker {
+    color: #A00;
+    font-weight: 600;
+  }
+
+  .markdown-content blockquote {
+    border-left: 4px solid #A00;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #a0a0a0;
+    background: rgba(170, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .markdown-content code {
+    background: #2a2a2a;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #ff6b6b;
+  }
+
+  .markdown-content pre {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid #333;
+  }
+
+  .markdown-content pre code {
+    background: transparent;
+    padding: 0;
+    color: #e5e5e5;
+  }
+
+  .markdown-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 2px solid #A00;
+  }
+
+  .markdown-content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #A00, transparent);
+    margin: 2rem 0;
+  }
+
+  .markdown-content strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .markdown-content em {
+    color: #A00;
+  }
+
+  /* Tabla de contenidos */
+  .markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  .markdown-content th, .markdown-content td {
+    border: 1px solid #333;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .markdown-content th {
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .markdown-content tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+  }
+</style>
