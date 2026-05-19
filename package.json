@@ -1,7 +1,7 @@
 {
   "name": "portafolio",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -20,5 +20,10 @@
     "globals": "^16.5.0",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.64.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "yaml": "^2.8.3"
+    }
   }
 }
