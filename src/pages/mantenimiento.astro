@@ -1,0 +1,78 @@
+---
+
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolios</title>
+  </head>
+  <body>
+    <section id="mensaje">
+      <header>
+        <h1 class="">Sitio web actualmente en mantenimiento</h1>
+      </header>
+      <p>¡Gracias por tu paciencia!</p>
+    </section>
+
+    <section id="contacto">
+      <header>
+        <h2>Puedes contactarme a travez de los siguientes medios:</h2>
+        <div>
+          <a href="http://" target="_blank" rel="noopener noreferrer">GH</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </header>
+    </section>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+
+    #mensaje {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      & > header {
+        font-size: 1.5rem;
+        animation: fade-in-out 2s infinite alternate ease-in-out;
+      }
+
+      & > p {
+        font-size: 1.25rem;
+        animation: fade-in-out 2s infinite alternate ease-in-out;
+      }
+    }
+  }
+
+  @keyframes fade-in-out {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+</style>
